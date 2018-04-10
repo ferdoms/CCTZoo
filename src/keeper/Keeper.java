@@ -28,7 +28,7 @@ public class Keeper {
     *simple public method get qualification to get the qualification attribute and return it when 
     *requested by other methods
     */
-    public String qualification(){
+    public String getQualification(){
         return qualification;
     }
     /**
