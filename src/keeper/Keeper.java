@@ -11,11 +11,16 @@ package keeper;
  */
 public class Keeper {
     private String name;
-    private String qualification;
+    private String qualification1;
+    private String qualification2;
+    private String qualification3;
     
-    public Keeper(String name, String qualification){
+    public Keeper(String name, String qualification1, String qualification2,
+            String qualification3){
        this.name = name;
-       this.qualification = qualification;
+       this.qualification1 = qualification1;
+       this.qualification2 = qualification2;
+       this.qualification3 = qualification3;
     }
     /**
     *simple public method get name to get the name attribute and return it when 
@@ -28,8 +33,14 @@ public class Keeper {
     *simple public method get qualification to get the qualification attribute and return it when 
     *requested by other methods
     */
-    public String getQualification(){
-        return qualification;
+    public String getQualification1(){
+        return qualification1;
+    }
+    public String getQualification2(){
+        return qualification2;
+    }
+    public String getQualification3(){
+        return qualification3;
     }
     /**
     *setName method which can create or change any keeper`s name 
@@ -41,7 +52,13 @@ public class Keeper {
     *setQualification method which can change any keeper`s qualification or 
     * create/set qualification to new keeper in the zoo
     */
-    public void setQualification(String qualification){
-        this.qualification = qualification;
+    public void setQualification1(String qualification1){
+        this.qualification1 = qualification1;
+    }
+    public void setQualification2(String qualification2){
+        this.qualification2 = qualification2;
+    }
+    public void setQualification3(String qualification3){
+        this.qualification3 = qualification3;
     }
 }
