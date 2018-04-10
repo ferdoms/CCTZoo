@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cctzoo;
+package interfaces;
 
 /**
  *
- * @author macbookair
+ * @author fernandoms
  */
-public class Teste {
+public interface Reptile {
     
 }
