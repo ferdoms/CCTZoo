@@ -5,10 +5,12 @@
  */
 package animals;
 
+import interfaces.MamalAvian;
+
 /**
  *
  * @author macbookair
  */
-public class Bat extends Animal {
+public class Bat extends Animal implements MamalAvian{
     
 }

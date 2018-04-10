@@ -5,10 +5,12 @@
  */
 package animals;
 
+import interfaces.Avian;
+
 /**
  *
  * @author joao-
  */
-public class Bird extends Animal{
+public class Bird extends Animal implements Avian{
     
 }

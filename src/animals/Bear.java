@@ -5,10 +5,12 @@
  */
 package animals;
 
+import interfaces.Mamal;
+
 /**
  *
  * @author joao-
  */
-public class Bear extends Animal{
+public class Bear extends Animal implements Mamal{
     
 }

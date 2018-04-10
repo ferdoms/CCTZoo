@@ -5,10 +5,12 @@
  */
 package animals;
 
+import interfaces.MamalAquatic;
+
 /**
  *
  * @author macbookair
  */
-public class Whale extends Animal {
+public class Whale extends Animal implements MamalAquatic{
     
 }
