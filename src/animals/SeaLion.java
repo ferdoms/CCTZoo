@@ -12,5 +12,11 @@ import interfaces.MamalAquatic;
  * @author joao-
  */
 public class SeaLion extends Animal implements MamalAquatic{
+
+    public SeaLion(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    }
+    
+    
     
 }

@@ -12,5 +12,11 @@ import interfaces.Insect;
  * @author joao-
  */
 public class Mosquito extends Animal implements Insect{
+
+    public Mosquito(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    }
+    
+    
     
 }

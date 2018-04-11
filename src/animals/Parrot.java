@@ -12,5 +12,11 @@ import interfaces.Avian;
  * @author joao-
  */
 public class Parrot extends Animal implements Avian{
+
+    public Parrot(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    }
+    
+    
     
 }

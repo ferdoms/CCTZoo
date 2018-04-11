@@ -12,5 +12,11 @@ import interfaces.Reptile;
  * @author joao-
  */
 public class Snake extends Animal implements Reptile{
+
+    public Snake(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    }
+    
+    
     
 }

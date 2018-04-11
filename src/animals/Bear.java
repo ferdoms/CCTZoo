@@ -12,5 +12,11 @@ import interfaces.Mamal;
  * @author joao-
  */
 public class Bear extends Animal implements Mamal{
+
+    public Bear(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    }
+    
+    
     
 }
