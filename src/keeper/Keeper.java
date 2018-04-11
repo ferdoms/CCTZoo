@@ -30,8 +30,11 @@ public class Keeper {
         return name;
     }
     /**
-    *simple public method get qualification to get the qualification attribute and return it when 
-    *requested by other methods
+    *setQualification method which can change any keeper`s qualification or 
+    * create/set qualification to new keeper in the zoo. We are going to create
+    * three getQualification methods and three setQualification methods 
+    * because a Keeper can be qualificated at a maximum of 
+    * three types of animals
     */
     public String getQualification1(){
         return qualification1;
@@ -50,7 +53,10 @@ public class Keeper {
     }
     /**
     *setQualification method which can change any keeper`s qualification or 
-    * create/set qualification to new keeper in the zoo
+    * create/set qualification to new keeper in the zoo. We are going to create
+    * three getQualification methods and three setQualification methods 
+    * because a Keeper can be qualificated at a maximum of three types 
+    * of animals
     */
     public void setQualification1(String qualification1){
         this.qualification1 = qualification1;
