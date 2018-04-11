@@ -11,16 +11,13 @@ package keeper;
  */
 public class Keeper {
     private String name;
-    private String qualification1;
-    private String qualification2;
-    private String qualification3;
+    public String[] qualification;
+    private int quantity;
     
-    public Keeper(String name, String qualification1, String qualification2,
-            String qualification3){
+    public Keeper(String name, int quantity){
        this.name = name;
-       this.qualification1 = qualification1;
-       this.qualification2 = qualification2;
-       this.qualification3 = qualification3;
+       qualification = new String[3];
+       this.quantity = quantity;
     }
     /**
     *simple public method get name to get the name attribute and return it when 
@@ -36,14 +33,11 @@ public class Keeper {
     * because a Keeper can be qualificated at a maximum of 
     * three types of animals
     */
-    public String getQualification1(){
-        return qualification1;
+    public String[] getQualification(){
+        return qualification;
     }
-    public String getQualification2(){
-        return qualification2;
-    }
-    public String getQualification3(){
-        return qualification3;
+    public int getQuantity(){
+        return quantity;
     }
     /**
     *setName method which can create or change any keeper`s name 
@@ -58,13 +52,22 @@ public class Keeper {
     * because a Keeper can be qualificated at a maximum of three types 
     * of animals
     */
-    public void setQualification1(String qualification1){
-        this.qualification1 = qualification1;
+    public void setQualification(String qualification){
+        int i;
+        for(i=0; i < this.qualification.length;i++){
+           if(this.qualification[i] == null){
+              this.qualification[i] = qualification;
+              System.out.println(qualification);
+              break;
+           }
+        }
     }
-    public void setQualification2(String qualification2){
-        this.qualification2 = qualification2;
-    }
-    public void setQualification3(String qualification3){
-        this.qualification3 = qualification3;
+    
+    public boolean isAvailable(){
+        this.quantity = getQuantity();
+        if(this.quantity <= 10){
+            return true;
+        }
+        return false;
     }
 }

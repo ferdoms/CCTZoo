@@ -10,5 +10,5 @@ package interfaces;
  * @author fernandoms
  */
 public interface Aquatic {
-    
+    public void swim();
 }

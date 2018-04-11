@@ -11,4 +11,5 @@ package interfaces;
  */
 public interface Avian {
     
+    public void fly();
 }

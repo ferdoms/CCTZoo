@@ -13,8 +13,11 @@ import interfaces.Insect;
  */
 public class Bee extends Animal implements Insect{
 
-    public Bee(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
-        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    public Bee(String dateOfBirth, String dateOfArrival, String gender, 
+            int OffSpring, String medication, boolean vaccine, boolean exhibit, 
+            int number) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, 
+                vaccine, exhibit, number);
     }
     
     
