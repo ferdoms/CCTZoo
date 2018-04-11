@@ -5,6 +5,8 @@
  */
 package cctzoo;
 
+import keeper.Keeper;
+
 /**
  *
  * @author fernandoms
@@ -15,8 +17,8 @@ public class ZooManager {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
+        Keeper keeper = new Keeper("Tiago","Mamal","Reptile","Avisn",9);
+        System.out.println(keeper.isAvailable());
         
     }
     

@@ -17,6 +17,11 @@ public class Hippopotamus extends Animal implements MamalAquatic{
     public Hippopotamus(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
         super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
     }
+
+    @Override
+    public void swim() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
