@@ -17,8 +17,7 @@ public class ZooManager {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Keeper keeper = new Keeper("Tiago","Mamal","Reptile","Avisn",9);
-        System.out.println(keeper.isAvailable());
+        
         
     }
     
