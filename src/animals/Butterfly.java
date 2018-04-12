@@ -13,9 +13,11 @@ import interfaces.Insect;
  */
 public class Butterfly extends Animal implements Insect{
 
-    public Butterfly(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
-        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    public Butterfly(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine);
     }
+
+    
     
     
     

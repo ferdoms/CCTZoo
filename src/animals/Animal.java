@@ -16,18 +16,17 @@ public abstract class Animal {
     int OffSpring;
     String medication;
     boolean vaccine;
-    boolean exhibit; 
-    int number;
+    static int exhibitNumber; 
+    String name;
 
-    public Animal(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
+    public Animal(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
         this.dateOfBirth = dateOfBirth;
         this.dateOfArrival = dateOfArrival;
         this.gender = gender;
         this.OffSpring = OffSpring;
         this.medication = medication;
         this.vaccine = vaccine;
-        this.exhibit = exhibit;
-        this.number = number;
+       
     }
 
     public String getDateOfBirth() {
@@ -54,13 +53,6 @@ public abstract class Animal {
         return vaccine;
     }
 
-    public boolean isExhibit() {
-        return exhibit;
-    }
-
-    public int getNumber() {
-        return number;
-    }
 
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
@@ -86,19 +78,29 @@ public abstract class Animal {
         this.vaccine = vaccine;
     }
 
-    public void setExhibit(boolean exhibit) {
-        this.exhibit = exhibit;
+    public static int getExhibitNumber() {
+        return exhibitNumber;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public String getName() {
+        return name;
     }
 
+    public static void setExhibitNumber(int exhibitNumber) {
+        Animal.exhibitNumber = exhibitNumber;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    
+    
     @Override
     public String toString() {
         return "Animal info:" + "\nDate Of Birth = " + dateOfBirth + "\nDate Of Arrival = " + dateOfArrival + ""
                 + "\nGender =  " + gender + "\nOffSpring = " + OffSpring + "\nMedication = " + medication + ""
-                + "\nVaccine = " + vaccine + "\nExhibit = " + exhibit + "\nNumber = " + number;
+                + "\nVaccine = " + vaccine + "\nExhibitnNumber = " + exhibitNumber;
     }
 
 

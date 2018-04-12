@@ -13,9 +13,11 @@ import interfaces.Mamal;
  */
 public class Tiger extends Animal implements Mamal{
 
-    public Tiger(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
-        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    public Tiger(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine);
     }
+
+    
     
     
     

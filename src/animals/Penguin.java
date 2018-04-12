@@ -13,10 +13,11 @@ import interfaces.Avian;
  */
 public class Penguin extends Animal implements Avian{
 
-    public Penguin(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
-        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    public Penguin(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine);
     }
 
+    
     @Override
     public void fly() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

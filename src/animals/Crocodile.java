@@ -13,9 +13,11 @@ import interfaces.ReptileAquatic;
  */
 public class Crocodile extends Animal implements ReptileAquatic{
 
-    public Crocodile(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
-        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    public Crocodile(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine);
     }
+
+    
 
     @Override
     public void swim() {

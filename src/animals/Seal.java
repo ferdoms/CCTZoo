@@ -13,9 +13,11 @@ import interfaces.MamalAquatic;
  */
 public class Seal extends Animal implements MamalAquatic{
 
-    public Seal(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine, boolean exhibit, int number) {
-        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine, exhibit, number);
+    public Seal(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
+        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine);
     }
+
+    
 
     @Override
     public void swim() {
