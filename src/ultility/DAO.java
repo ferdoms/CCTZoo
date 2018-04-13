@@ -17,30 +17,28 @@ import java.io.BufferedWriter;
  *
  * @author fernandoms
  */
-public class ZooFileHandler {
+public class DAO {
     
     private static Path path;
     private File file;
     private Logger logger = new Logger();
     private String fileName;
     
-    public ZooFileHandler(String fileName){
+    public DAO(String fileName){
         fileName = fileName + ".txt";
         path = FileSystems.getDefault().getPath("src","resources", fileName);
-        createsTXT(fileName);
+        createsTXT();
     }
     
-    private void createsTXT(String fileName){
+    private void createsTXT(){
                 
         try {
 	    file = new File(path.toString());
-	     
-      
 	    if (file.createNewFile()){
-	        logger.log("File has been created successfully");
+	        logger.log("File '" + fileName + "'has been created successfully");
 	    }
 	    else{
-	        logger.log("File already present at the specified location");
+	        logger.log("File '" + fileName + "'has been opened successfully");
 	    }
     	} catch (IOException e) {
     		logger.log("Exception Occurred:");
@@ -49,7 +47,7 @@ public class ZooFileHandler {
         
     }
     
-    public void appendLine(String line) {
+    public void append(String data) {
 
         try {
             FileWriter fw = new FileWriter(file, true);
@@ -59,7 +57,7 @@ public class ZooFileHandler {
             /* The three statements below will add three 
            * Strings to the file in new lines.
              */
-            pw.println(line);
+            pw.println(data);
             pw.close();
 
             logger.log("Data successfully appended at the end of file" + fileName);

@@ -1,0 +1,33 @@
+Animal info:
+Date Of Birth = 01/01/01
+Date Of Arrival = 01/01/01
+Gender =  male
+OffSpring = 10
+Medication = AA
+Vaccine = true
+Exhibit = true
+Number = 10
+Animal info:
+Date Of Birth = 01/01/01
+Date Of Arrival = 01/01/01
+Gender =  male
+OffSpring = 0
+Medication = AA
+Vaccine = true
+ExhibitnNumber = 1001
+Animal info:
+Date Of Birth = 01/01/01
+Date Of Arrival = 01/01/01
+Gender =  male
+OffSpring = 0
+Medication = AA
+Vaccine = true
+ExhibitnNumber = 1001
+Animal info:
+Date Of Birth = 01/01/01
+Date Of Arrival = 01/01/01
+Gender =  male
+OffSpring = 0
+Medication = AA
+Vaccine = true
+ExhibitnNumber = 1001

@@ -13,8 +13,8 @@ import interfaces.Mamal;
  */
 public class Giraffe extends Animal implements Mamal{
 
-    public Giraffe(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine);
+    public Giraffe(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
+        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
     }
 
     

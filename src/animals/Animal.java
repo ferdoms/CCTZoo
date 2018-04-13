@@ -10,22 +10,26 @@ package animals;
  * @author fernandoms
  */
 public abstract class Animal {
-    String dateOfBirth;
-    String dateOfArrival;
-    String gender;
-    int OffSpring;
-    String medication;
-    boolean vaccine;
-    static int exhibitNumber; 
-    String name;
+    private String dateOfBirth;
+    private String dateOfArrival;
+    private String gender;
+    private int OffSpring;
+    private String medication;
+    private boolean vaccine;
+    private static int serial = 1000;
+    private final String exhibitNumber; 
+    private String name;
+    
 
-    public Animal(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
+    public Animal(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
         this.dateOfBirth = dateOfBirth;
         this.dateOfArrival = dateOfArrival;
         this.gender = gender;
-        this.OffSpring = OffSpring;
+        this.OffSpring = 0;
         this.medication = medication;
         this.vaccine = vaccine;
+        serial = serial+1;
+        exhibitNumber = Integer.toString(serial);
        
     }
 
@@ -78,16 +82,12 @@ public abstract class Animal {
         this.vaccine = vaccine;
     }
 
-    public static int getExhibitNumber() {
+    public String getExhibitNumber() {
         return exhibitNumber;
     }
 
     public String getName() {
         return name;
-    }
-
-    public static void setExhibitNumber(int exhibitNumber) {
-        Animal.exhibitNumber = exhibitNumber;
     }
 
     public void setName(String name) {

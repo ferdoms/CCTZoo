@@ -13,8 +13,8 @@ import interfaces.MamalAvian;
  */
 public class Bat extends Animal implements MamalAvian{
 
-    public Bat(String dateOfBirth, String dateOfArrival, String gender, int OffSpring, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, OffSpring, medication, vaccine);
+    public Bat(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
+        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
     }
 
     @Override
