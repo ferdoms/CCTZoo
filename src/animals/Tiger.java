@@ -5,16 +5,16 @@
  */
 package animals;
 
-import interfaces.Mamal;
+import interfaces.Mammal;
 
 /**
  *
  * @author macbookair
  */
-public class Tiger extends Animal implements Mamal{
+public class Tiger extends Animal implements Mammal{
 
-    public Tiger(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Tiger(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
     

@@ -13,8 +13,8 @@ import interfaces.Avian;
  */
 public class Penguin extends Animal implements Avian{
 
-    public Penguin(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Penguin(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
     

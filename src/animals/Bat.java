@@ -5,16 +5,16 @@
  */
 package animals;
 
-import interfaces.MamalAvian;
+import interfaces.MammalAvian;
 
 /**
  *
  * @author macbookair
  */
-public class Bat extends Animal implements MamalAvian{
+public class Bat extends Animal implements MammalAvian{
 
-    public Bat(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Bat(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
     @Override

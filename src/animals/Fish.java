@@ -13,8 +13,8 @@ import interfaces.Aquatic;
  */
 public class Fish extends Animal implements Aquatic{
 
-    public Fish(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Fish(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
     

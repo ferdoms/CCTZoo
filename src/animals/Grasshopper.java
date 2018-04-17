@@ -13,8 +13,8 @@ import interfaces.Insect;
  */
 public class Grasshopper extends Animal implements Insect{
 
-    public Grasshopper(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Grasshopper(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
     

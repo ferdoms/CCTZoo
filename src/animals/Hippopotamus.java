@@ -5,17 +5,17 @@
  */
 package animals;
 
-import interfaces.Mamal;
-import interfaces.MamalAquatic;
+import interfaces.Mammal;
+import interfaces.MammalAquatic;
 
 /**
  *
  * @author joao-
  */
-public class Hippopotamus extends Animal implements MamalAquatic{
+public class Hippopotamus extends Animal implements MammalAquatic{
 
-    public Hippopotamus(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Hippopotamus(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
     

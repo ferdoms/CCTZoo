@@ -5,16 +5,16 @@
  */
 package animals;
 
-import interfaces.Mamal;
+import interfaces.Mammal;
 
 /**
  *
  * @author joao-
  */
-public class Rhinocerus extends Animal implements Mamal{
+public class Rhinocerus extends Animal implements Mammal{
 
-    public Rhinocerus(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Rhinocerus(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
 

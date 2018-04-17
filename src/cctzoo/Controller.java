@@ -5,10 +5,16 @@
  */
 package cctzoo;
 
+import animals.Animal;
+
 /**
  *
  * @author fernandoms
  */
 public class Controller {
     
+    
+    public void startApplication(){
+        // instancia 
+    }
 }

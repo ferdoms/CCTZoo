@@ -13,8 +13,8 @@ import interfaces.Reptile;
  */
 public class Snake extends Animal implements Reptile{
 
-    public Snake(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Snake(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
     

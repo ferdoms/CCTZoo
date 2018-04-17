@@ -13,15 +13,16 @@ public abstract class Animal {
     private String dateOfBirth;
     private String dateOfArrival;
     private String gender;
-    private int OffSpring;
-    private String medication;
-    private boolean vaccine;
-    private static int serial = 1000;
+    private Integer OffSpring = null;// Medication to Object
+    private String medication = null;// Medication to Object
+    private boolean vaccine = false;
+    private static int serial = 1000;   
     private final String exhibitNumber; 
     private String name;
+    //raca string
     
 
-    public Animal(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
+    public Animal(String dateOfBirth, String dateOfArrival, String gender) {
         this.dateOfBirth = dateOfBirth;
         this.dateOfArrival = dateOfArrival;
         this.gender = gender;
@@ -93,14 +94,23 @@ public abstract class Animal {
     public void setName(String name) {
         this.name = name;
     }
+    public String getSpecie(){
+        return this.getClass().getSimpleName();
+    }
     
+    public String getType(){
+        return this.getClass().getInterfaces()[0].getSimpleName();
+    }
     
     
     @Override
     public String toString() {
-        return "Animal info:" + "\nDate Of Birth = " + dateOfBirth + "\nDate Of Arrival = " + dateOfArrival + ""
-                + "\nGender =  " + gender + "\nOffSpring = " + OffSpring + "\nMedication = " + medication + ""
-                + "\nVaccine = " + vaccine + "\nExhibitnNumber = " + exhibitNumber;
+        return "Animal info:" 
+                + "\n Name = " + name + " the " + getSpecie()
+                + "\n Type = " + getType()
+                + "\n Date Of Birth = " + dateOfBirth + "\n Date Of Arrival = " + dateOfArrival + ""
+                + "\n Gender =  " + gender + "\n OffSpring = " + OffSpring + "\n Medication = " + medication + ""
+                + "\n Vaccine = " + vaccine + "\n ExhibitnNumber = " + exhibitNumber;
     }
 
 

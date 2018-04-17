@@ -5,10 +5,12 @@
  */
 package interfaces;
 
+
+
 /**
  *
  * @author fernandoms
  */
-public interface MamalAvian extends Mamal, Avian {
-    
+public interface MammalAquatic extends Mammal, Aquatic {
+  
 }

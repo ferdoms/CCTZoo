@@ -9,6 +9,6 @@ package interfaces;
  *
  * @author fernandoms
  */
-public interface Mamal {
+public interface MammalAvian extends Mammal, Avian {
     
 }

@@ -12,3 +12,9 @@
 2018-04-13 13:45:22 - File already present at the specified location
 2018-04-13 13:45:35 - File already present at the specified location
 2018-04-13 13:45:55 - File already present at the specified location
+2018-04-13 16:03:30 - File 'null'has been opened successfully
+2018-04-13 16:03:30 - File 'null'has been created successfully
+2018-04-13 16:12:59 - File 'null'has been opened successfully
+2018-04-13 16:12:59 - File 'null'has been opened successfully
+2018-04-16 15:13:17 - File 'null'has been opened successfully
+2018-04-16 15:13:17 - File 'null'has been opened successfully

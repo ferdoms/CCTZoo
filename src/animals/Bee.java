@@ -13,8 +13,9 @@ import interfaces.Insect;
  */
 public class Bee extends Animal implements Insect{
 
-    public Bee(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Bee(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
+    
     }
 
     

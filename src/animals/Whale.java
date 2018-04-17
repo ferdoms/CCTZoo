@@ -5,16 +5,16 @@
  */
 package animals;
 
-import interfaces.MamalAquatic;
+import interfaces.MammalAquatic;
 
 /**
  *
  * @author macbookair
  */
-public class Whale extends Animal implements MamalAquatic{
+public class Whale extends Animal implements MammalAquatic{
 
-    public Whale(String dateOfBirth, String dateOfArrival, String gender, String medication, boolean vaccine) {
-        super(dateOfBirth, dateOfArrival, gender, medication, vaccine);
+    public Whale(String dateOfBirth, String dateOfArrival, String gender) {
+        super(dateOfBirth, dateOfArrival, gender);
     }
 
     
