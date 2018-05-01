@@ -1,5 +1,6 @@
 
 import animals.*;
+import cctzoo.Controller;
 import interfaces.Aquatic;
 import interfaces.Avian;
 import java.io.IOException;
@@ -12,10 +13,12 @@ import ultility.AnimalModel;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import ultility.DAO;
 import ultility.DataSetup;
 import interfaces.Mammal;
 import interfaces.MammalAvian;
+import view.SearchMenu;
+import view.ShowAnimal;
+import view.View;
 /**
  *
  * @author fernandoms
@@ -34,9 +37,9 @@ public class LabTester {
 //           
             
         
-        DataSetup ds = new DataSetup();
-        ArrayList<Animal> animals = ds.generateAnimals(20);
-        AnimalModel am = new AnimalModel(animals);
+//        DataSetup ds = new DataSetup();
+//        ArrayList<Animal> animals = ds.generateAnimals(20);
+//        AnimalModel am = new AnimalModel(animals);
 //
 //        for(Animal animal:animals){
 //            System.out.println(animal.getName() + " The " + animal.getSpecie() + " - " + animal.getGender() + " - " + animal.getType());
@@ -46,18 +49,29 @@ public class LabTester {
 //        for(Animal animal:result){
 //            System.out.println(animal.getName() + " The " + animal.getSpecie() + " - " + animal.getGender() + " - " + animal.getType());
 //        }
-        Animal animal = animals.get(2);
-        System.out.println("before change");
-        System.out.println(animal.getName() + " The " + animal.getSpecie());
-        System.out.println();
+//        Animal animal = animals.get(2);
+//        System.out.println("before change");
+//        System.out.println(animal.getName() + " The " + animal.getSpecie());
+//        System.out.println();
+//        
+//        animal.setName("Fernando");
+//        System.out.println("After change");
+//        System.out.println(animal.getName() + " The " + animal.getSpecie());
+//        System.out.println();
+//        
+//        am.update(animal);
+//        am.list();
+
+        Controller ctrl = new Controller();
+        ctrl.start();
+        while(!ctrl.exit()){
+        ctrl.update();
+        }
         
-        animal.setName("Fernando");
-        System.out.println("After change");
-        System.out.println(animal.getName() + " The " + animal.getSpecie());
-        System.out.println();
-        
-        am.update(animal);
-        am.list();
+//           View s = new SearchMenu();
+//           s.quit();
+//           System.out.println(s.getExit());
+//        
         
         
     }
