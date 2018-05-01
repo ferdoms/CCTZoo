@@ -30,7 +30,7 @@ public class ShowAnimalsList extends View {
     public View getOpt() {
         switch(getInputWithLabel("Option")){
             case "1":
-                return new SearchMenu();
+                return new SearchAnimalMenu();
             case "2":
                 return null;
             default:

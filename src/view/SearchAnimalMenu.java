@@ -11,11 +11,13 @@ import animals.Animal;
  *
  * @author fernandoms
  */
-public class SearchMenu extends View {
+public class SearchAnimalMenu extends View {
 
     @Override
     public void display()  {
         System.out.println("====================================================");
+        System.out.println();
+        System.out.println("Search Animal:");
         System.out.println();
         System.out.println("1-By Exhibit Number");
         System.out.println("2-By Name");
@@ -45,7 +47,7 @@ public class SearchMenu extends View {
             case "0":
                 return null;
             default:
-                return new SearchMenu();                
+                return new SearchAnimalMenu();                
         }
     }
   
