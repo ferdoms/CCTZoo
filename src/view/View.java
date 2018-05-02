@@ -8,8 +8,6 @@ package view;
 import animals.Animal;
 import java.util.Scanner;
 import ultility.AnimalModel;
-import ultility.Epoch;
-
 
 /**
  * Purpose: this class was created to standardize methods that all of the VIEWS 
@@ -92,10 +90,5 @@ public abstract class View {
      */
     public boolean getExit(){
         return exit;
-    }
-    
-    public Epoch epoch(){
-        return new Epoch();
-    }
-    
+    }    
 }

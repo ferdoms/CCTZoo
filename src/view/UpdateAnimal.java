@@ -48,8 +48,7 @@ public class UpdateAnimal extends View {
                 month = getInputWithLabel("Month");
                 year = getInputWithLabel("Year");
                 
-                date = epoch().date(day, month, year);
-                
+                date = day + "/" + month + "/" + year;
                 animal.setDateOfArrival(date);
                 
                 return new UpdateAnimal(this.animal);
