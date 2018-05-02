@@ -35,6 +35,8 @@ public class ShowAnimal extends View {
             System.out.println(animal.toString());
         }
         System.out.println();
+        System.out.println("1-Return    2-Update Info    0-Exit");
+        System.out.println();
     }
 
     @Override
@@ -42,10 +44,12 @@ public class ShowAnimal extends View {
         switch(getInputWithLabel("Option")){
             case "1":
                 return new SearchAnimalMenu();
+            case "2":
+                return new UpdateAnimal(this.animal);  
             case "0":
                 return null;
             default:
-                System.out.println("Error");
+                System.out.println("Please make sure to type one of the available options");
                 return new ShowAnimal(this.animal);                
         }
     }

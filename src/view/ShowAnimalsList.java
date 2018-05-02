@@ -22,7 +22,7 @@ public class ShowAnimalsList extends View {
     public void display() {
         // improve this screen
         for(Animal animal:animals){
-            System.out.println(animal.getExhibitNumber() + " - " + animal.getName() + " - " + animal.getSpecie() + " - " + animal.getType());
+            System.out.println(animal.shortInfo());
         }
     }
 

@@ -5,20 +5,71 @@
  */
 package view;
 
+import animals.Animal;
+import ultility.Epoch;
+
 /**
  *
  * @author fernandoms
  */
 public class UpdateAnimal extends View {
 
+    private Animal animal;
+    public UpdateAnimal(Animal a){
+        this.animal = a;
+    }
     @Override
     public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("====================================================");
+        System.out.println();
+        System.out.println("Update animal info:");
+        System.out.println();
+        System.out.println(animal.shortInfo());
+        System.out.println("1-Arrival date: " + animal.getDateOfArrival());
+        System.out.println("2-Birth date:   " + animal.getDateOfBirth());
+        System.out.println("3-Vacine:       " + animal.isVaccinated());
+        System.out.println();
+        System.out.println("0-Return");
+        System.out.println();
     }
+       
 
     @Override
     public View getOpt() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String day;
+        String month;
+        String year;
+        String date;
+        
+        switch(getInputWithLabel("Option")){
+            case "1":
+                System.out.println("Arrival date:");
+                day = getInputWithLabel("Day");
+                month = getInputWithLabel("Month");
+                year = getInputWithLabel("Year");
+                
+                date = epoch().date(day, month, year);
+                
+                animal.setDateOfArrival(date);
+                
+                return new UpdateAnimal(this.animal);
+            case "2":
+                System.out.println("Birth date:");
+                day = getInputWithLabel("Day");
+                month = getInputWithLabel("Month");
+                year = getInputWithLabel("Year");
+                
+                date = day + "/" + month + "/" + year;
+                
+                animal.setDateOfArrival(date);
+                
+                return new UpdateAnimal(this.animal);  
+            case "0":
+                return new ShowAnimal(this.animal);
+            default:
+                System.out.println("Please make sure to type one of the available options");
+                return new UpdateAnimal(this.animal);
+        }
     }
     
 }

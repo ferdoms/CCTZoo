@@ -16,6 +16,7 @@ import ultility.AnimalModel;
 import ultility.DataSetup;
 import interfaces.Mammal;
 import interfaces.MammalAvian;
+import ultility.Epoch;
 import view.SearchAnimalMenu;
 import view.ShowAnimal;
 import view.View;
@@ -62,11 +63,14 @@ public class LabTester {
 //        am.update(animal);
 //        am.list();
 
-        Controller ctrl = new Controller();
-        ctrl.start();
-        while(!ctrl.exit()){
-        ctrl.update();
-        }
+//        Controller ctrl = new Controller();
+//        ctrl.start();
+//        while(!ctrl.exit()){
+//        ctrl.update();
+//        }
+
+          String date = new Epoch().date("01", "01", "2001");
+          System.out.println(date);
         
 //           View s = new SearchMenu();
 //           s.quit();

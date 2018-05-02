@@ -13,8 +13,8 @@ public abstract class Animal {
     private String dateOfBirth;
     private String dateOfArrival;
     private String gender;
-    private Integer OffSpring = null;// Medication to Object
-    private String medication = null;// Medication to Object
+    private Integer OffSpring = null;// to Object
+    private String medication = null;// to Object
     private boolean vaccine = false;
     private static int serial = 1000;   
     private final String exhibitNumber; 
@@ -54,7 +54,7 @@ public abstract class Animal {
         return medication;
     }
 
-    public boolean isVaccine() {
+    public boolean isVaccinated() {
         return vaccine;
     }
 
@@ -100,6 +100,9 @@ public abstract class Animal {
     
     public String getType(){
         return this.getClass().getInterfaces()[0].getSimpleName();
+    }
+    public String shortInfo(){
+        return this.getExhibitNumber() + " - " + this.getName() + " - " + this.getSpecie() + " - " + this.getType();
     }
     
     

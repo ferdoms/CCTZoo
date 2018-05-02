@@ -8,6 +8,7 @@ package view;
 import animals.Animal;
 import java.util.Scanner;
 import ultility.AnimalModel;
+import ultility.Epoch;
 
 
 /**
@@ -23,7 +24,6 @@ public abstract class View {
     Scanner kb = new Scanner(System.in);//get input from the user
     
     private AnimalModel animalModel;
-
     /**
      * Purpose: abstract method which prints the view to console.
      */
@@ -93,4 +93,9 @@ public abstract class View {
     public boolean getExit(){
         return exit;
     }
+    
+    public Epoch epoch(){
+        return new Epoch();
+    }
+    
 }
