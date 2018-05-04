@@ -1,0 +1,8 @@
+
+Criar: 
+        
+- Classe Abstrata Model
+- Classes KeeperModel (nos mesmos moldes do animal model)
+- utility.DataSetup:  Implementar todos animais na classe
+- utility.DataSetup:  Implementar criacao randomica de keeper  
+ 

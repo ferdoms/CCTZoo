@@ -30,10 +30,10 @@ public  class  Epoch {
             int d = Integer.parseInt(day);
             int m = Integer.parseInt(month);
             int y = Integer.parseInt(year);
-            System.out.println(y);
-            return formatter.format(new Date(y,m,d));
+            System.out.println(d + "-" + m + "-" + y);
+            Date date = new Date(y-1900,m-1,d);
+         
+                    
+            return formatter.format(date);
         }
-        
-        
-
 }

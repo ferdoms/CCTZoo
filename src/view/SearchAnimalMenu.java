@@ -23,6 +23,7 @@ public class SearchAnimalMenu extends View {
         System.out.println("2-By Name");
         System.out.println("3-By Specie");
         System.out.println("4-By Type");
+        System.out.println();
         System.out.println("0-Exit");
         System.out.println();
     }

@@ -53,7 +53,6 @@ public class AnimalModel {
         
         for(Animal animal:animals){
             if(animal.getExhibitNumber().equals(enumber)){
-                System.out.println("ultility.AnimalModel.searchByExhibitNumber()");
                 return animal;
             }
         }

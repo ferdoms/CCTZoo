@@ -13,8 +13,6 @@ import ultility.AnimalModel;
  * Purpose: this class was created to standardize methods that all of the VIEWS 
  *          has to implement or to inherit. All classes which represents a view
  *          screen must extends this class.
- * 
- * 
  * @author fernandoms
  */
 public abstract class View {
@@ -34,7 +32,7 @@ public abstract class View {
      * @return View or null
      */
     public abstract View getOpt();
-    private boolean exit = false;
+    
 
         
     /**
@@ -76,19 +74,4 @@ public abstract class View {
     public AnimalModel animal(){
         return animalModel;
     }
-    
-    /**
-     *
-     */
-    public void quit(){
-        exit = true;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public boolean getExit(){
-        return exit;
-    }    
 }
