@@ -7,17 +7,24 @@ package keeper;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira.
  */
 public class Keeper {
     private String name;
     public String[] qualification;
     private int quantity;
+    private static int keeperId = 0;
+    private final String keeperNumber;
     
-    public Keeper(String name, int quantity){
+    /**
+    * constructor method passing variables to the attributes
+    */
+    public Keeper(String name, int quantity, int keeperId){
        this.name = name;
        qualification = new String[3];
        this.quantity = quantity;
+       keeperId += 1;//increments Keeper ID by 1
+       keeperNumber = Integer.toString(keeperId);//generates keeper identification number
     }
     /**
     *simple public method get name to get the name attribute and return it when 
@@ -36,6 +43,10 @@ public class Keeper {
     public String[] getQualification(){
         return qualification;
     }
+    /**
+    *getQuantity method returns the total number of animals assigned to 
+    * every keeper and its direct linked to identification number.
+    */
     public int getQuantity(){
         return quantity;
     }
@@ -44,6 +55,13 @@ public class Keeper {
     */
     public void setName(String Name){
         this.name = name;
+    }
+    /**
+    *getKeeperNumber returns keeper identification number
+    */
+    public String getKeeperNumber(){
+        return keeperNumber;
+        
     }
     /**
     *setQualification method which can change any keeper`s qualification or 
@@ -62,12 +80,30 @@ public class Keeper {
            }
         }
     }
-    
+    /**
+    *Method isAvailable validates data when any keeper is going to be assigned
+    * to any new animal, if the keeper is already responsible for 10 animals
+    * this method will not allow the keeper to be assigned to a new animal
+    * because it has reached its limit of assignments.
+    */
     public boolean isAvailable(){
         this.quantity = getQuantity();
         if(this.quantity <= 10){
             return true;
         }
         return false;
+    }
+    /**
+    *toString method is responsible for transforming all information 
+    * into string type when displaying data to the console
+    */
+    public String toString(){
+        String keeperInformation = "";
+        keeperInformation = "Keeper identification number: " + keeperNumber
+                + "\nName: " + name 
+                + "\nQualification: " + qualification 
+                + "\nResponsible for " + quantity +" animals in the zoo";
+        
+        return keeperInformation;//show (return) data to the screen 
     }
 }
