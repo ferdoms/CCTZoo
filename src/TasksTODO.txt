@@ -19,7 +19,7 @@ Implementar/ melhorar:
 - view.showKeeperList
 - view.addAnimal
 - view.addKeeper
-- view.updateKeeper - criar - depende de keeperModel
+Fernando - view.updateKeeper - criar - depende de keeperModel
  
 Possibilidades:
 
