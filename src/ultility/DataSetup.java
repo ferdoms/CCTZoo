@@ -230,11 +230,8 @@ public class DataSetup {
                     
             }   
         
-        
         }
         
-        
-       
         return animalsList;
     }
     
@@ -473,8 +470,5 @@ public class DataSetup {
         Wolf.setName(randomName(Wolf.getGender()));
         return Wolf;
     }
-    
-    
-    
-            
+     
 }
