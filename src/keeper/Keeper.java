@@ -11,7 +11,7 @@ package keeper;
  */
 public class Keeper {
     private String name;
-    private String[] qualification;
+    private String[] qualifications;
     private String[] quantity;
     private static int keeperId = 0;
     private final String keeperNumber;
@@ -21,7 +21,7 @@ public class Keeper {
     */
     public Keeper(String name, int keeperId){
        this.name = name;
-       qualification = new String[3];
+       qualifications = new String[3];
        quantity = new String[10];
        //this.quantity = quantity;
        keeperId += 1;//increments Keeper ID by 1
@@ -41,16 +41,23 @@ public class Keeper {
     * because a Keeper can be qualificated at a maximum of 
     * three types of animals
     */
-//    public String[] getQualification(){
-//        return qualification;
-//    }
+    public String getQualification(){
+        String result = "";
+        for(int i = 0; i<qualifications.length; i++){
+            if(this.qualifications[i] != null){
+                result += qualifications[i];
+                return result;
+            }
+        }
+        return null;
+    }
     /**
     *getQuantity method returns the total number of animals assigned to 
     * every keeper and its direct linked to identification number.
     */
-    public String[] getQuantity(){
-        return quantity;
-    }
+//    public String[] getQuantity(){
+//        return quantity;
+//    }
     /**
     *setName method which can create or change any keeper`s name 
     */
@@ -73,9 +80,9 @@ public class Keeper {
     */
     public void setQualification(String qualification){
         int i;
-        for(i=0; i < this.qualification.length;i++){
-           if(this.qualification[i] == null){
-              this.qualification[i] = qualification;
+        for(i=0; i < this.qualifications.length;i++){
+           if(this.qualifications[i] == null){
+              this.qualifications[i] = qualification;
               System.out.println(qualification);
               break;
            }
@@ -87,6 +94,16 @@ public class Keeper {
     * this method will not allow the keeper to be assigned to a new animal
     * because it has reached its limit of assignments.
     */
+    
+    public boolean hasQualification(String qualification){
+        for(String q:qualifications){
+           if(q == qualification){
+              return true;
+           }
+        }
+        return false;
+    }
+    
     public boolean isAvailable(){
         for(int i=0; i < this.quantity.length; i++){
             if(this.quantity[i] == null){
@@ -124,7 +141,7 @@ public class Keeper {
         String keeperInformation = "";
         keeperInformation = "Keeper identification number: " + keeperNumber
                 + "\nName: " + name 
-                + "\nQualification: " + qualification 
+                + "\nQualification: " + qualifications 
                 + "\nResponsible for " + quantity +" animals in the zoo";
         
         return keeperInformation;//show (return) data to the screen 

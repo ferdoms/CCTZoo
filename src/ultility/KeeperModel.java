@@ -68,9 +68,9 @@ public class KeeperModel {
     public Keeper[] searchByQualification(String qualification){
         ArrayList<Keeper> keeperList = new ArrayList<>();
         for(Keeper keeper:keepers){
-//            if(keeper.getQualification().equals(qualification)){
-//                keeperList.add(keeper);
-//            }
+            if(keeper.hasQualification(qualification)){
+                keeperList.add(keeper);
+            }
         }
         return keeperList.toArray(new Keeper[keeperList.size()]);  
     }
