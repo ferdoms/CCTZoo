@@ -42,6 +42,7 @@ public abstract class View {
      * @return user input
      */
     public String getInputWithLabel(String label){
+
         String input;
         System.out.print(label + ": ");
         input = kb.next();

@@ -18,7 +18,7 @@ import java.util.Random;
 public class DataSetup {
     
     Random rand =  new Random();
-    Epoch epoch = new Epoch();
+    Date epoch = new Date();
     
     public DataSetup(){
         
@@ -236,236 +236,236 @@ public class DataSetup {
     
     public Animal createCat(){
         
-        Animal cat = new Cat(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal cat = new Cat(epoch.toString(),epoch.toString(), randomGender());
         cat.setName(randomName(cat.getGender()));
         return cat;
     }
     public Animal createBat(){
         
-        Animal bat = new Bat(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal bat = new Bat(epoch.toString(),epoch.toString(), randomGender());
         bat.setName(randomName(bat.getGender()));
         return bat;
     }
     public Animal createBear(){
         
-        Animal Bear = new Bear(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Bear = new Bear(epoch.toString(),epoch.toString(), randomGender());
         Bear.setName(randomName(Bear.getGender()));
         return Bear;
     }
     
     public Animal createBee(){
         
-        Animal Bee = new Bee(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Bee = new Bee(epoch.toString(),epoch.toString(), randomGender());
         Bee.setName(randomName(Bee.getGender()));
         return Bee;
     }
     
     public Animal createBird(){
         
-        Animal Bird = new Bird(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Bird = new Bird(epoch.toString(),epoch.toString(), randomGender());
         Bird.setName(randomName(Bird.getGender()));
         return Bird;
     }
     
     public Animal createButterfly(){
         
-        Animal Butterfly = new Butterfly(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Butterfly = new Butterfly(epoch.toString(),epoch.toString(), randomGender());
         Butterfly.setName(randomName(Butterfly.getGender()));
         return Butterfly;
     }
     
     public Animal createCrocodile(){
         
-        Animal Crocodile = new Crocodile(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Crocodile = new Crocodile(epoch.toString(),epoch.toString(), randomGender());
         Crocodile.setName(randomName(Crocodile.getGender()));
         return Crocodile;
     }
     
     public Animal createDog(){
         
-        Animal Dog = new Dog(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Dog = new Dog(epoch.toString(),epoch.toString(), randomGender());
         Dog.setName(randomName(Dog.getGender()));
         return Dog;
     }
     
     public Animal createDeer(){
         
-        Animal Deer = new Deer(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Deer = new Deer(epoch.toString(),epoch.toString(), randomGender());
         Deer.setName(randomName(Deer.getGender()));
         return Deer;
     }
     
     public Animal createFish(){
         
-        Animal Fish = new Fish(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Fish = new Fish(epoch.toString(),epoch.toString(), randomGender());
         Fish.setName(randomName(Fish.getGender()));
         return Fish;
     }
     
     public Animal createFrog(){
         
-        Animal Frog = new Frog(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Frog = new Frog(epoch.toString(),epoch.toString(), randomGender());
         Frog.setName(randomName(Frog.getGender()));
         return Frog;
     }
     
     public Animal createGiraffe(){
         
-        Animal Giraffe = new Giraffe(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Giraffe = new Giraffe(epoch.toString(),epoch.toString(), randomGender());
         Giraffe.setName(randomName(Giraffe.getGender()));
         return Giraffe;
     }
     
     public Animal createGrasshopper(){
         
-        Animal Grasshopper = new Grasshopper(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Grasshopper = new Grasshopper(epoch.toString(),epoch.toString(), randomGender());
         Grasshopper.setName(randomName(Grasshopper.getGender()));
         return Grasshopper;
     }
     
     public Animal createHippopotamus(){
         
-        Animal Hippopotamus = new Hippopotamus(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Hippopotamus = new Hippopotamus(epoch.toString(),epoch.toString(), randomGender());
         Hippopotamus.setName(randomName(Hippopotamus.getGender()));
         return Hippopotamus;
     }
     
     public Animal createHorse(){
         
-        Animal Horse = new Horse(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Horse = new Horse(epoch.toString(),epoch.toString(), randomGender());
         Horse.setName(randomName(Horse.getGender()));
         return Horse;
     }
     
     public Animal createLion(){
         
-        Animal Lion = new Lion(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Lion = new Lion(epoch.toString(),epoch.toString(), randomGender());
         Lion.setName(randomName(Lion.getGender()));
         return Lion;
     }
     
     public Animal createLizard(){
         
-        Animal Lizard = new Lizard(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Lizard = new Lizard(epoch.toString(),epoch.toString(), randomGender());
         Lizard.setName(randomName(Lizard.getGender()));
         return Lizard;
     }
     
     public Animal createMonkey(){
         
-        Animal Monkey = new Monkey(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Monkey = new Monkey(epoch.toString(),epoch.toString(), randomGender());
         Monkey.setName(randomName(Monkey.getGender()));
         return Monkey;
     }
     
     public Animal createMosquito(){
         
-        Animal Mosquito = new Mosquito(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Mosquito = new Mosquito(epoch.toString(),epoch.toString(), randomGender());
         Mosquito.setName(randomName(Mosquito.getGender()));
         return Mosquito;
     }
     
     public Animal createOwl(){
         
-        Animal Owl = new Owl(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Owl = new Owl(epoch.toString(),epoch.toString(), randomGender());
         Owl.setName(randomName(Owl.getGender()));
         return Owl;
     }
     
     public Animal createPanda(){
         
-        Animal Panda = new Panda(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Panda = new Panda(epoch.toString(),epoch.toString(), randomGender());
         Panda.setName(randomName(Panda.getGender()));
         return Panda;
     }
     
     public Animal createParrot(){
         
-        Animal Parrot = new Parrot(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Parrot = new Parrot(epoch.toString(),epoch.toString(), randomGender());
         Parrot.setName(randomName(Parrot.getGender()));
         return Parrot;
     }
     
     public Animal createPenguin(){
         
-        Animal Penguin = new Penguin(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Penguin = new Penguin(epoch.toString(),epoch.toString(), randomGender());
         Penguin.setName(randomName(Penguin.getGender()));
         return Penguin;
     }
     
     public Animal createRat(){
         
-        Animal Rat = new Rat(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Rat = new Rat(epoch.toString(),epoch.toString(), randomGender());
         Rat.setName(randomName(Rat.getGender()));
         return Rat;
     }
     
     public Animal createRhinocerus(){
         
-        Animal Rhinocerus = new Rhinocerus(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Rhinocerus = new Rhinocerus(epoch.toString(),epoch.toString(), randomGender());
         Rhinocerus.setName(randomName(Rhinocerus.getGender()));
         return Rhinocerus;
     }
     
     public Animal createSeaLion(){
         
-        Animal SeaLion = new SeaLion(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal SeaLion = new SeaLion(epoch.toString(),epoch.toString(), randomGender());
         SeaLion.setName(randomName(SeaLion.getGender()));
         return SeaLion;
     }
     
     public Animal createSeal(){
         
-        Animal Seal = new Seal(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Seal = new Seal(epoch.toString(),epoch.toString(), randomGender());
         Seal.setName(randomName(Seal.getGender()));
         return Seal;
     }
     
     public Animal createSnake(){
         
-        Animal Snake = new Snake(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Snake = new Snake(epoch.toString(),epoch.toString(), randomGender());
         Snake.setName(randomName(Snake.getGender()));
         return Snake;
     }
     
     public Animal createSpider(){
         
-        Animal Spider = new Spider(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Spider = new Spider(epoch.toString(),epoch.toString(), randomGender());
         Spider.setName(randomName(Spider.getGender()));
         return Spider;
     }
     
     public Animal createTiger(){
         
-        Animal Tiger = new Tiger(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Tiger = new Tiger(epoch.toString(),epoch.toString(), randomGender());
         Tiger.setName(randomName(Tiger.getGender()));
         return Tiger;
     }
     
     public Animal createToucan(){
         
-        Animal Toucan = new Toucan(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Toucan = new Toucan(epoch.toString(),epoch.toString(), randomGender());
         Toucan.setName(randomName(Toucan.getGender()));
         return Toucan;
     }
     
     public Animal createTurtle(){
         
-        Animal Turtle = new Turtle(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Turtle = new Turtle(epoch.toString(),epoch.toString(), randomGender());
         Turtle.setName(randomName(Turtle.getGender()));
         return Turtle;
     }
     
     public Animal createWhale(){
         
-        Animal Whale = new Whale(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Whale = new Whale(epoch.toString(),epoch.toString(), randomGender());
         Whale.setName(randomName(Whale.getGender()));
         return Whale;
     }
     
     public Animal createWolf(){
         
-        Animal Wolf = new Wolf(epoch.getTimestamp(),epoch.getTimestamp(), randomGender());
+        Animal Wolf = new Wolf(epoch.toString(),epoch.toString(), randomGender());
         Wolf.setName(randomName(Wolf.getGender()));
         return Wolf;
     }
