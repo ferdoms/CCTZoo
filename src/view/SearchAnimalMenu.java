@@ -9,7 +9,7 @@ import animals.Animal;
 
 /**
  *
- * @author fernandoms
+ * @author Fernando Marinho da Silva
  */
 public class SearchAnimalMenu extends View {
 
@@ -24,6 +24,7 @@ public class SearchAnimalMenu extends View {
         System.out.println("3-By Specie");
         System.out.println("4-By Type");
         System.out.println();
+        System.out.println("9-Return");
         System.out.println("0-Exit");
         System.out.println();
     }
@@ -61,9 +62,12 @@ public class SearchAnimalMenu extends View {
                     return this;
                 }
                 return new ShowAnimalsList(resultList);
+            case "9":
+                return new AnimalMenu();
             case "0":
                 return null;
             default:
+                err("Unable to indentify the typed option. Please try again.");
                 return new SearchAnimalMenu();                
         }
     }

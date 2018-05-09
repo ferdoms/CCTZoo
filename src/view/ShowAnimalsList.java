@@ -20,18 +20,38 @@ public class ShowAnimalsList extends View {
     
     @Override
     public void display() {
-        // improve this screen
-        
+        System.out.println("====================================================");
+        System.out.println();
+        System.out.println("Animals List:");
+        System.out.println();
         for(Animal animal:animals){
             System.out.println(animal.shortInfo());
         }
+        System.out.println();
+        System.out.println("1-Detailed Info    2-Update Info    9-Return    0-Exit");
+        System.out.println();
     }
 
     @Override
     public View getOpt() {
+        Animal result;
         switch(getInputWithLabel("Option")){
             case "1":
-                return new SearchAnimalMenu();
+                result = animal().searchByExhibitNumber(getInputWithLabel("Exhibit Number"));
+                if(result == null){
+                    err("No Animal found with the given Exhibition Number");
+                    return this;
+                }
+                return new ShowAnimal(result);
+            case "2":
+                result = animal().searchByExhibitNumber(getInputWithLabel("Exhibit Number"));
+                if(result == null){
+                    err("No Animal found with the given Exhibition Number");
+                    return this;
+                }
+                return new UpdateAnimal(result); 
+            case "9":
+                return new AnimalMenu();
             case "0":
                 return null;
             default:

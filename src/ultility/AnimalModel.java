@@ -41,6 +41,7 @@ public class AnimalModel {
                 resultList.add(animal);
             }
         }
+        if(resultList.isEmpty()){return null;}
         return resultList.toArray(new Animal[resultList.size()]);   
     }
     
@@ -71,6 +72,7 @@ public class AnimalModel {
                 resultList.add(animal);
             }
         }
+        if(resultList.isEmpty()){ return null;}
         return resultList.toArray(new Animal[resultList.size()]);  
     }
     public Animal[] searchByType(String type){
@@ -80,6 +82,7 @@ public class AnimalModel {
                 resultList.add(animal);
             }
         }
+        if(resultList.isEmpty()){ return null;}
         return resultList.toArray(new Animal[resultList.size()]);  
     }
     
