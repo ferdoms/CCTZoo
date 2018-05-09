@@ -20,7 +20,7 @@ public class AnimalMenu extends View{
         System.out.println();
         System.out.println("Animal Menu:");
         System.out.println();
-        System.out.println("1-Seach Menu");
+        System.out.println("1-Search Menu");
         System.out.println("2-List Animals");
         System.out.println("3-Update Animal");
         System.out.println();

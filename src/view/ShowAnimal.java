@@ -44,7 +44,7 @@ public class ShowAnimal extends View {
     public View getOpt() {
         switch(getInputWithLabel("Option")){
             case "1":
-                return new SearchAnimalMenu();
+                return new AnimalMenu();
             case "2":
                 return new UpdateAnimal(this.animal);  
             case "0":
