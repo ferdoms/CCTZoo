@@ -9,6 +9,16 @@ package view;
  *
  * @author fernandoms
  */
-public class MainMenu {
+public class MainMenu extends View{
+
+    @Override
+    public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public View getOpt() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

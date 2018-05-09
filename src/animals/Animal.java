@@ -7,7 +7,7 @@ package animals;
 
 /**
  *
- * @author fernandoms
+ * @author Fernando Marinho da Silva
  */
 public abstract class Animal {
     private String dateOfBirth;

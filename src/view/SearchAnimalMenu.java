@@ -35,15 +35,31 @@ public class SearchAnimalMenu extends View {
         switch(getInputWithLabel("Option")){
             case "1":
                 result = animal().searchByExhibitNumber(getInputWithLabel("Exhibit Number"));
+                if(result == null){
+                    err("No Animal found with the given Exhibition Number");
+                    return this;
+                }
                 return new ShowAnimal(result);
             case "2":
                 resultList = animal().searchByName(getInputWithLabel("Name"));
+                if(resultList == null){
+                    err("No Animal found with the given Name");
+                    return this;
+                }
                 return new ShowAnimalsList(resultList);
             case "3":
                 resultList = animal().searchBySpecie(getInputWithLabel("Specie"));
+                if(resultList == null){
+                    err("No Animal found with the given Specie");
+                    return this;
+                }
                 return new ShowAnimalsList(resultList);
             case "4":
                 resultList = animal().searchByType(getInputWithLabel("Type"));
+                if(resultList == null){
+                    err("No Animal found with the given Type");
+                    return this;
+                }
                 return new ShowAnimalsList(resultList);
             case "0":
                 return null;

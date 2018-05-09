@@ -12,7 +12,8 @@ import java.util.Random;
 
 /**
  *
- * @author fernandoms
+ * @author Fernando Marinho da Silva
+ * @author Joao Pedro Haddad
  */
 public class DataSetup {
     

@@ -86,7 +86,9 @@ public class AnimalModel {
     public void update(Animal animal){
         animals.set(animals.indexOf(animal), animal);
     }
-    
+    public Animal[] all(){
+        return animals.toArray(new Animal[animals.size()]);
+    }
     // testing class
     public void list(){
         for(Animal animal:animals){

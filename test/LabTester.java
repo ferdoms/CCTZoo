@@ -68,14 +68,10 @@ public class LabTester {
         while(!ctrl.exit()){
         ctrl.update();
         }
-//
-//          String date = new Epoch().date("30", "02", "2001");
-//          System.out.println(date);
-//        
-//           View s = new SearchMenu();
-//           s.quit();
-//           System.out.println(s.getExit());
-//        
+//          Animal[] animalsList = am.all();
+//          for(Animal a:animalsList){
+//              System.out.println(a.shortInfo());
+//          }
         
         
     }

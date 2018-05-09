@@ -74,4 +74,8 @@ public abstract class View {
     public AnimalModel animal(){
         return animalModel;
     }
+    
+    public void err(String error){
+        System.err.println("ERROR: " + error);
+    }
 }

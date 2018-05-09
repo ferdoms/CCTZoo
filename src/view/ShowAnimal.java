@@ -27,10 +27,11 @@ public class ShowAnimal extends View {
     public void display(){
         System.out.println("====================================================");
         System.out.println();
+        System.out.println("\tAnimal detailed info");
         if(animal == null){
             System.out.println("No Animal found with given Exhibition Number");
         }else{
-            System.out.println("\tAnimal detailed info");
+            
             System.out.println();
             System.out.println(animal.toString());
         }

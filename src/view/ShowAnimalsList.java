@@ -21,6 +21,7 @@ public class ShowAnimalsList extends View {
     @Override
     public void display() {
         // improve this screen
+        
         for(Animal animal:animals){
             System.out.println(animal.shortInfo());
         }
@@ -31,10 +32,10 @@ public class ShowAnimalsList extends View {
         switch(getInputWithLabel("Option")){
             case "1":
                 return new SearchAnimalMenu();
-            case "2":
+            case "0":
                 return null;
             default:
-                System.out.println("Error");
+                err("Unable to indentify the typed option. Please try again.");
                 return new ShowAnimalsList(this.animals);                
         }
 

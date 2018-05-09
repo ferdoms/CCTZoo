@@ -3,18 +3,18 @@ Criar:
         
 
 - Classes KeeperModel (nos mesmos moldes do animal model)
-- utility.DataSetup:  Implementar todos animais na classe
+Pedro - utility.DataSetup:  Implementar todos animais na classe
 - utility.DataSetup:  Implementar criacao randomica de keeper  
-- Criacao de classe Data;
+- Criacao de classe Date;
 - Criacao de innerClass offspring dentro da classe abstrata Animal
 
 Implementar/ melhorar:
 
 - cctzoo.controller: melhorar methodo update para suportar keeperModel - depende de classes kepeerModel e Model
-- view.animalMenu
+Fernando - view.animalMenu
 - view.keeperMenu
-- view.mainMenu
-- view.ShoeAnimalsList - melhorar
+Fernando - view.mainMenu
+Fernando - view.ShowAnimalsList - melhorar
 - view.showKeeper
 - view.showKeeperList
 - view.addAnimal
