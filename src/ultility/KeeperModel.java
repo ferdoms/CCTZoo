@@ -41,6 +41,7 @@ public class KeeperModel {
                 keeperList.add(keeper);
             }
         }
+        if(keeperList.isEmpty()){return null;}
         return keeperList.toArray(new Keeper[keeperList.size()]);   
     }
     
@@ -72,6 +73,7 @@ public class KeeperModel {
                 keeperList.add(keeper);
             }
         }
+        if(keeperList.isEmpty()){return null;}
         return keeperList.toArray(new Keeper[keeperList.size()]);  
     }
     

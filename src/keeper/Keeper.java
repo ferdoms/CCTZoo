@@ -42,14 +42,14 @@ public class Keeper {
     * three types of animals
     */
     public String getQualification(){
+        //return qualifications.toString();
         String result = "";
         for(int i = 0; i<qualifications.length; i++){
             if(this.qualifications[i] != null){
-                result += qualifications[i];
-                return result;
+                result += qualifications[i] + " ";
             }
         }
-        return null;
+        return result;
     }
     /**
     *getQuantity method returns the total number of animals assigned to 
@@ -83,7 +83,6 @@ public class Keeper {
         for(i=0; i < this.qualifications.length;i++){
            if(this.qualifications[i] == null){
               this.qualifications[i] = qualification;
-              System.out.println(qualification);
               break;
            }
         }
@@ -137,11 +136,12 @@ public class Keeper {
     *toString method is responsible for transforming all information 
     * into string type when displaying data to the console
     */
+    @Override
     public String toString(){
         String keeperInformation = "";
         keeperInformation = "Keeper identification number: " + keeperNumber
                 + "\nName: " + name 
-                + "\nQualification: " + qualifications 
+                + "\nQualification: " + getQualification() 
                 + "\nResponsible for " + quantity +" animals in the zoo";
         
         return keeperInformation;//show (return) data to the screen 
