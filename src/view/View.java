@@ -10,7 +10,7 @@ import java.util.Scanner;
 import ultility.AnimalModel;
 
 /**
- * Purpose: this class was created to standardize methods that all of the VIEWS 
+ * Purpose: this class was created to standardise methods that all of the VIEWS 
  *          has to implement or to inherit. All classes which represents a view
  *          screen must extends this class.
  * @author fernandoms

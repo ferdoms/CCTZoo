@@ -11,18 +11,19 @@ package keeper;
  */
 public class Keeper {
     private String name;
-    public String[] qualification;
-    private int quantity;
+    private String[] qualification;
+    private String[] quantity;
     private static int keeperId = 0;
     private final String keeperNumber;
     
     /**
     * constructor method passing variables to the attributes
     */
-    public Keeper(String name, int quantity, int keeperId){
+    public Keeper(String name, int keeperId){
        this.name = name;
        qualification = new String[3];
-       this.quantity = quantity;
+       quantity = new String[10];
+       //this.quantity = quantity;
        keeperId += 1;//increments Keeper ID by 1
        keeperNumber = Integer.toString(keeperId);//generates keeper identification number
     }
@@ -40,14 +41,14 @@ public class Keeper {
     * because a Keeper can be qualificated at a maximum of 
     * three types of animals
     */
-    public String[] getQualification(){
-        return qualification;
-    }
+//    public String[] getQualification(){
+//        return qualification;
+//    }
     /**
     *getQuantity method returns the total number of animals assigned to 
     * every keeper and its direct linked to identification number.
     */
-    public int getQuantity(){
+    public String[] getQuantity(){
         return quantity;
     }
     /**
@@ -87,12 +88,34 @@ public class Keeper {
     * because it has reached its limit of assignments.
     */
     public boolean isAvailable(){
-        this.quantity = getQuantity();
-        if(this.quantity <= 10){
-            return true;
-        }
+        for(int i=0; i < this.quantity.length; i++){
+            if(this.quantity[i] == null){
+                return true;
+        }   
+      }
         return false;
     }
+    
+    public void assignAnimal(String onemore){
+        for(int i=0; i < this.quantity.length;i++){
+           if(this.quantity[i] == null){
+              this.quantity[i] = onemore;
+              System.out.println(onemore);
+              break;
+           }
+        } 
+    }
+    
+    public void unassignAnimal(String oneless){
+        int i;
+        for(i=0; i < this.quantity.length;i++){
+           if(this.quantity[i] == oneless){
+              this.quantity[i] = null;
+              break;
+           }
+        }
+    }
+    
     /**
     *toString method is responsible for transforming all information 
     * into string type when displaying data to the console

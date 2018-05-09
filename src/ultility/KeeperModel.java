@@ -65,12 +65,12 @@ public class KeeperModel {
      * @param specie takes in a String that represents an Exhibition Number
      * @return an Animal object.
      */ 
-    public Keeper[] searchByQualification(String [] qualification){
+    public Keeper[] searchByQualification(String qualification){
         ArrayList<Keeper> keeperList = new ArrayList<>();
         for(Keeper keeper:keepers){
-            if(keeper.getQualification().equals(qualification)){
-                keeperList.add(keeper);
-            }
+//            if(keeper.getQualification().equals(qualification)){
+//                keeperList.add(keeper);
+//            }
         }
         return keeperList.toArray(new Keeper[keeperList.size()]);  
     }
@@ -81,9 +81,9 @@ public class KeeperModel {
     
     // testing class
     public void keeperlist(){
-        for(Keeper keeper:keepers){
-            System.out.println(keeper.getQualification()+ " - " + keeper.getName() 
-                    + " The " + keeper.keeperNumber();
-        }
+//        for(Keeper keeper:keepers){
+//            System.out.println(keeper.getQualification()+ " - " + keeper.getName() 
+//                    + " The " + keeper.keeperNumber();
+//        }
     }
 }
