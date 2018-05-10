@@ -5,6 +5,8 @@
  */
 package keeper;
 
+import animals.Animal;
+
 /**
  *
  * @author Joao Pedro Haddad Oliveira.
@@ -52,15 +54,27 @@ public class Keeper {
         return result;
     }
     /**
-    *getQuantity method returns the total number of animals assigned to 
+    *purpose:getAmountOfAnimals method returns the total number of animals assigned to 
     * every keeper and its direct linked to identification number.
     */
-//    public String[] getQuantity(){
-//        return quantity;
-//    }
+    public int getAmountOfAnimals(){
+        int result = 0;
+        for(int i = 0; i < animalsAssigned.length; i++){
+            if(this.animalsAssigned[i] != null){
+              result++;
+        }
+       }
+        return result;
+    }
+    
+    public String[] getAnimalsAssigned(){
+        return this.animalsAssigned;
+    }
+
     /**
-    *setName method which can create or change any keeper`s name 
-    */
+     * setName method which can create or change any keeper`s name
+     * @param Name
+     */
     public void setName(String Name){
         this.name = name;
     }
@@ -112,24 +126,30 @@ public class Keeper {
         return false;
     }
     
-    public void assignAnimal(String onemore){
-        for(int i=0; i < this.animalsAssigned.length;i++){
-           if(this.animalsAssigned[i] == null){
-              this.animalsAssigned[i] = onemore;
-              System.out.println(onemore);
-              break;
-           }
-        } 
+    public boolean assignAnimal(Animal animal){
+        if(hasQualification(animal.getType())){
+            if(getAmountOfAnimals() < 10){
+               for(int i=0; i < this.animalsAssigned.length;i++){
+               if(this.animalsAssigned[i] == null){
+                    this.animalsAssigned[i] = animal.getExhibitNumber();
+                    return true;
+                    }
+                } 
+            }
+            return false;
+        }
+        return false;
     }
     
-    public void unassignAnimal(String oneless){
+    public boolean unassignAnimal(String oneless){
         int i;
         for(i=0; i < this.animalsAssigned.length;i++){
            if(this.animalsAssigned[i] == oneless){
               this.animalsAssigned[i] = null;
-              break;
+              return true;
            }
         }
+        return false;
     }
     
     public String shortInfo(){
