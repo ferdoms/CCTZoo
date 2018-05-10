@@ -19,7 +19,7 @@ public class Keeper {
     /**
     * constructor method passing variables to the attributes
     */
-    public Keeper(String name, int keeperId){
+    public Keeper(String name){
        this.name = name;
        qualifications = new String[3];
        quantity = new String[10];

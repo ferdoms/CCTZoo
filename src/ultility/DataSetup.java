@@ -131,8 +131,7 @@ public String randomKeeperName(){
     
       public Keeper createKeeper(){
         
-        Keeper keeper = new Keeper();
-        keeper.setName(randomKeeperName());
+        Keeper keeper = new Keeper(randomKeeperName());
         return keeper;
     }
      
