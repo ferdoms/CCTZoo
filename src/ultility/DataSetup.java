@@ -82,20 +82,35 @@ public class DataSetup {
 }
 public String randomKeeperName(){
         
-            String[] keeperNames = {"Olivia Adler", "Charlotte Anderson", 
-                "Silas Bardot", "Declan Becker", "Oliver Becket", 
-                "Noah Cohen", "Amelia Coleman", "Mia Copeland", 
-                "Emma Davis", "Ava Delaney", "Luna Devlin",
-                "Aria Dixon", "Isabella Duncan", "Arabella Ellis",
-                "Bodhi Finley", "Mason Gibbs", "Jack Griffin", "William Hendrix",
-                "Milo Hepburn", "Owen Hutton", "Jack Jennings", "Ben Jones",
-                "Brian Kennedy", "Maurice Langley", "James Lennon",
-                "John Lincoln", "Carl Miller", "Steven Monroe", "Ana Nash",
-                "Mike Nixon", "Charles Penn", "Alan Smith", "Jack Stone", 
-                "Christy Sullivan", "Noel Sutton", "Glenn Thompson", 
-                "Mark Walker", "Phil West", "Aaron Whiley", "Jonnie Wilson"};
-            int number = rand.nextInt(keeperNames.length);
-            return keeperNames[number];
+            String[] firstName = {"Olivia", "Charlotte", 
+                "Silas", "Declan", "Oliver", 
+                "Noah", "Amelia", "Mia", 
+                "Emma", "Ava", "Luna",
+                "Aria", "Isabella", "Arabella",
+                "Bodhi", "Mason", "Jack", "William",
+                "Milo", "Owen", "Jack", "Ben",
+                "Brian", "Maurice", "James",
+                "John", "Carl", "Steven", "Ana",
+                "Mike", "Charles", "Alan", "Jack", 
+                "Christy", "Noel", "Glenn", 
+                "Mark", "Phil", "Aaron", "Jonnie"};
+
+            String[] lastName = {"Adler", "Anderson", 
+                "Bardot", "Becker", "Becket", 
+                "Cohen", "Coleman", "Copeland", 
+                "Davis", "Delaney", "Devlin",
+                "Dixon", "Duncan", "Ellis",
+                "Finley", "Gibbs", "Griffin", "Hendrix",
+                "Hepburn", "Hutton", "Jennings", "Jones",
+                "Kennedy", "Langley", "Lennehan",
+                "incoln", "Miller", "Monroe", "Nash",
+                "Nixon", "Penn", "Smith", "Stone", 
+                "Sullivan", "Sutton", "Thompson", 
+                "Walker", "West", "Whiley", "Wilson"};
+
+            int nFirstName = rand.nextInt(firstName.length); 
+            int nLastName = rand.nextInt(lastName.length);
+            return firstName[nFirstName] + " " + lastName[nLastName];
         
         
     }
@@ -106,18 +121,10 @@ public String randomKeeperName(){
         keeperList = new ArrayList<Keeper>();
         Keeper keeper = null;
         for(int i=0; i<Quantity;i++){
+        
+        keeper = createKeeper();
+        keeperList.add(keeper);
 
-            switch(rand.nextInt(40)){
-                case 0:
-                    keeper = createKeeper();
-                    keeperList.add(keeper);
-                    break;
-                
-                case 1:
-                    keeper = createKeeper();
-                    keeperList.add(keeper);
-                    break;
-            }
         }
         return keeperList;
     }
@@ -126,9 +133,6 @@ public String randomKeeperName(){
         
         Keeper keeper = new Keeper();
         keeper.setName(randomKeeperName());
-        keeper.getName();
-        keeper.getQualification();
-        keeper.getKeeperNumber();
         return keeper;
     }
      
