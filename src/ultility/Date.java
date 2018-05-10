@@ -89,7 +89,7 @@ public  class  Date {
            return this.day;
        }
          
-            public static boolean isValid(int year, int month, int day) {
+    public static boolean isValid(int year, int month, int day) {
         if (year < 0) return false;
         if ((month < 1) || (month > 12)) return false;
         if ((day < 1) || (day > 31)) return false;
@@ -109,7 +109,7 @@ public  class  Date {
         }
     }
             
-             public static boolean isLeap (int year) {
+    public static boolean isLeap (int year) {
             if (year % 4 != 0) {
               return false;
             } else if (year % 400 == 0) {
