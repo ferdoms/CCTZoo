@@ -29,16 +29,16 @@ public class SearchKeeperMenu extends View{
 
     @Override
         public View getOpt() {
-        Keeper keeper;
+        Keeper resultKeeper;
         Keeper[] keeperList;
         switch(getInputWithLabel("Option")){
             case "1":
-                keeper = keeper.searchByKeeperNumber()(getInputWithLabel("Keeper Number"));
-                if(keeper == null){
+                resultKeeper = keeper().searchByKeeperNumber(getInputWithLabel("Keeper Number"));
+                if(resultKeeper == null){
                     err("No Keeper found with the given Keeper Number");
                     return this;
                 }
-                return new Keeper(result);
+                return new ShowKeeper(resultKeeper);
             case "2":
                 keeperList = keeper().searchByName(getInputWithLabel("Name"));
                 if(keeperList == null){
@@ -55,5 +55,4 @@ public class SearchKeeperMenu extends View{
                 return new SearchKeeperMenu();                
         }
     }
-  }
 }

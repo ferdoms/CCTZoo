@@ -6,6 +6,7 @@
 package view;
 
 import animals.Animal;
+import keeper.Keeper;
 import ultility.Date;
 
 /**
@@ -26,9 +27,9 @@ public class UpdateKeeper extends View {
         System.out.println();
         System.out.println(keeper.shortInfo());
         System.out.println();
-        System.out.println("1-Qualification: " + animal.getDateOfArrival());
-        System.out.println("2-Birth date:   " + animal.getDateOfBirth());
-        System.out.println("3-Vacine:       " + animal.isVaccinated());
+        System.out.println("1-Name: " + keeper.getName());
+        System.out.println("2-Qualification:   " + keeper.getQualification());
+        System.out.println("3-Quantity of Animal assigned:       " + keeper.getAmountOfAnimals());
         System.out.println();
         System.out.println("0-Return");
         System.out.println();
@@ -37,41 +38,35 @@ public class UpdateKeeper extends View {
 
     @Override
     public View getOpt() {
-        String day;
-        String month;
-        String year;
-        String date;
+        String fname;
+        String lname;
+        String fullName;
         
         switch(getInputWithLabel("Option")){
             case "1":
-                System.out.println("Arrival date:");
-                day = getInputWithLabel("Day");
-                month = getInputWithLabel("Month");
-                year = getInputWithLabel("Year");
+                System.out.println("Updating Name:");
+                fname = getInputWithLabel("First name");
+                lname = getInputWithLabel("Last name");
                 
-                date = year + "-" + month + "-" + day;
-                animal.setDateOfArrival(date);
+                fullName = fname +" "+ lname;
+                keeper.setName(fullName);
                 
-                return new UpdateKeeper(this.animal);
+                return new UpdateKeeper(this.keeper);
             case "2":
-                System.out.println("Birth date:");
-                day = getInputWithLabel("Day");
-                month = getInputWithLabel("Month");
-                year = getInputWithLabel("Year");
+                System.out.println("Updating Name:");
+                fname = getInputWithLabel("First name");
+                lname = getInputWithLabel("Last name");
                 
-                date = year + "-" + month + "-" + day;
+                fullName = fname +" "+ lname;
+                keeper.setName(fullName);
                 
+                return new UpdateKeeper(this.keeper);
                 
-                animal.setDateOfArrival(date);
-                
-                
-                
-                return new UpdateKeeper(this.animal);  
             case "0":
-                return new ShowAnimal(this.animal);
+                return new ShowKeeper(this.keeper);
             default:
                 System.out.println("Please make sure to type one of the available options");
-                return new UpdateKeeper(this.animal);
+                return new UpdateKeeper(this.keeper);
         }
     }
     

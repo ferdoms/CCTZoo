@@ -133,5 +133,33 @@ public class DataSetup {
         Keeper keeper = new Keeper(randomKeeperName());
         return keeper;
     }
+      
+      
+        public String randomQualification(){
+            
+            String[] types = {"Aquatic", "avian", 
+                "Insect", "Mammal"};
+            
+            int nType = rand.nextInt(types.length); 
+            return types[nType];
+    }
+        
+        public Keeper createQualification(){
+        
+        Keeper typeOfQualification = new Keeper(randomQualification());
+        return typeOfQualification;
+    }
+    
+        public void generateQualification(){
+        
+        Keeper k = new Keeper();
+        for(int i=0; i<3;i++){
+        
+        k.setQualification(createQualification().toString());
+
+        }
+      
+    }
+    
      
 }

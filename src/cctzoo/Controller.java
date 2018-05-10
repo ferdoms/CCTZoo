@@ -10,6 +10,8 @@ import ultility.AnimalModel;
 import ultility.DataSetup;
 import ultility.KeeperModel;
 import view.AnimalMenu;
+import view.KeeperMenu;
+import view.MainMenu;
 import view.View;
 
 /**
@@ -30,7 +32,7 @@ public class Controller {
         DataSetup ds = new DataSetup();
         animalModel = new AnimalModel(ds.generateAnimals(100));
         keeperModel = new KeeperModel(ds.generateKeepers(100));
-        view = new AnimalMenu();
+        view = new KeeperMenu();
         
     }
 
