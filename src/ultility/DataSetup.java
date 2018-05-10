@@ -18,7 +18,9 @@ import java.util.Random;
 public class DataSetup {
     
     Random rand =  new Random();
-    Epoch epoch = new Epoch(); 
+
+    Date epoch = new Date();
+
     
     public DataSetup(){
         

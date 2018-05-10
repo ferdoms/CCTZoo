@@ -6,7 +6,7 @@
 package view;
 
 import animals.Animal;
-import ultility.Epoch;
+import ultility.Date;
 
 /**
  *
@@ -49,7 +49,7 @@ public class UpdateAnimal extends View {
                 month = getInputWithLabel("Month");
                 year = getInputWithLabel("Year");
                 
-                date = day + "/" + month + "/" + year;
+                date = year + "-" + month + "-" + day;
                 animal.setDateOfArrival(date);
                 
                 return new UpdateAnimal(this.animal);
@@ -59,9 +59,12 @@ public class UpdateAnimal extends View {
                 month = getInputWithLabel("Month");
                 year = getInputWithLabel("Year");
                 
-                date = day + "/" + month + "/" + year;
+                date = year + "-" + month + "-" + day;
+                
                 
                 animal.setDateOfArrival(date);
+                
+                
                 
                 return new UpdateAnimal(this.animal);  
             case "0":
