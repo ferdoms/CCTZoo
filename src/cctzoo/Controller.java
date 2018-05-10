@@ -8,6 +8,7 @@ package cctzoo;
 import animals.Animal;
 import ultility.AnimalModel;
 import ultility.DataSetup;
+import ultility.KeeperModel;
 import view.AnimalMenu;
 import view.View;
 
@@ -19,6 +20,7 @@ import view.View;
 public class Controller {
     private View view;
     private AnimalModel animalModel;
+    private KeeperModel keeperModel;
     
     /**
      * Purpose: it starts the system by setting up the basic data and calling the 
@@ -27,7 +29,7 @@ public class Controller {
     public void start(){
         DataSetup ds = new DataSetup();
         animalModel = new AnimalModel(ds.generateAnimals(100));
-        
+        keeperModel = new KeeperModel(ds.generateKeepers(100));
         view = new AnimalMenu();
         
     }
@@ -37,7 +39,7 @@ public class Controller {
      * 
      */
     public void update(){
-        view.fetchData(animalModel);
+        view.fetchData(animalModel, keeperModel);
         view.display();
         view = view.getOpt();
     }

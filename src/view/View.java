@@ -8,9 +8,10 @@ package view;
 import animals.Animal;
 import java.util.Scanner;
 import ultility.AnimalModel;
+import ultility.KeeperModel;
 
 /**
- * Purpose: this class was created to standardise methods that all of the VIEWS 
+ * Purpose: this class was created to standardize methods that all of the VIEWS 
  *          has to implement or to inherit. All classes which represents a view
  *          screen must extends this class.
  * @author fernandoms
@@ -20,6 +21,7 @@ public abstract class View {
     Scanner kb = new Scanner(System.in);//get input from the user
     
     private AnimalModel animalModel;
+    private KeeperModel keeperModel;
     /**
      * Purpose: abstract method which prints the view to console.
      */
@@ -64,8 +66,9 @@ public abstract class View {
      *
      * @param a
      */
-    public void fetchData(AnimalModel a){
+    public void fetchData(AnimalModel a, KeeperModel k){
         this.animalModel = a;
+        this.keeperModel = k;
     }
 
     /**
@@ -74,6 +77,10 @@ public abstract class View {
      */
     public AnimalModel animal(){
         return animalModel;
+    }
+    
+    public KeeperModel keeper(){
+        return keeperModel;
     }
     
     public void err(String error){

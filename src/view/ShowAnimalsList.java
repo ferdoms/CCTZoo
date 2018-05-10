@@ -12,7 +12,7 @@ import animals.Animal;
  * @author fernandoms
  */
 public class ShowAnimalsList extends View {
-    Animal[] animals;
+    private Animal[] animals;
     public ShowAnimalsList(Animal[] animals) {
         this.animals = animals; 
     }

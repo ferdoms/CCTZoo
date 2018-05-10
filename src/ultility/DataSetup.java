@@ -78,9 +78,8 @@ public class DataSetup {
         return animalsList;
     }
             
-}
-}
-public String randomKeeperName(){
+
+    public String randomKeeperName(){
         
             String[] firstName = {"Olivia", "Charlotte", 
                 "Silas", "Declan", "Oliver", 
