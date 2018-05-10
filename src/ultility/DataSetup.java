@@ -19,7 +19,9 @@ import keeper.Keeper;
 public class DataSetup {
     
     Random rand =  new Random();
-    Epoch epoch = new Epoch();
+
+    Date epoch = new Date();
+
     
     public DataSetup(){
         
@@ -41,195 +43,36 @@ public class DataSetup {
         
     }
     
+    public String randomSpecie(){
+        
+
+
+        String[] species = {"Bat", "Bear", "Bee", "Bird", "Butterfly", 
+            "Cat", "Crocodile", "Deer", "Dog", "Fish", "Frog", "Giraffe",
+            "Grasshopper", "Hippopotamus", "Horse", "Lion", "Lizard", "Monkey",
+            "Mosquito", "Owl", "Panda", "Parrot", "Penguin", "Rat", "Rhinocerus",
+            "SeaLion", "Seal", "Snake", "Spider", "Tiger", "Toucan", "Turtle", "Whale",
+            "Wolf"};
+        int number = rand.nextInt(species.length);
+        return species[number];
+    }
+    
     public String randomGender(){
         if(rand.nextInt(2) == 1){
             return "male";
         }
-        
         return "female";
     }
     
-    public ArrayList<Animal> generateAnimals(int Quantity){
+    public ArrayList<Animal> generateAnimals(int quantity){
         
         ArrayList<Animal> animalsList;
         animalsList = new ArrayList<Animal>();
-        Animal animal = null;
-        for(int i=0; i<Quantity;i++){
-
-            switch(rand.nextInt(34)){
-                case 0:
-                    animal = createCat();
-                    animalsList.add(animal);
-                    break;
-                                        
-                case 1:
-                    animal = createBat();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 2:
-                    
-                    animal = createBear();
-                    animalsList.add(animal);
-                    break;
-                
-                case 3:
-                    animal = createBee();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 4:
-                    animal = createBird();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 5:
-                    animal = createButterfly();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 6:
-                    animal = createCrocodile();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 7:
-                    animal = createDeer();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 8:
-                    animal = createDog();
-                    animalsList.add(animal);
-                    break;    
-                
-                case 9:
-                    animal = createFish();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 10:
-                    animal = createFrog();
-                    animalsList.add(animal);
-                    break;
-                
-                case 11:
-                    animal = createGiraffe();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 12:
-                    animal = createGrasshopper();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 13:
-                    animal = createHippopotamus();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 14:
-                    animal = createHorse();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 15:
-                    animal = createLion();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 16:
-                    animal = createLizard();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 17:
-                    animal = createMonkey();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 18:
-                    animal = createMosquito();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 19:
-                    animal = createOwl();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 20:
-                    animal = createPanda();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 21:
-                    animal = createParrot();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 22:
-                    animal = createPenguin();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 23:
-                    animal = createRat();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 24:
-                    animal = createRhinocerus();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 25:
-                    animal = createSeaLion();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 26:
-                    animal = createSeal();
-                    animalsList.add(animal);
-                    break;    
-                   
-                case 27:
-                    animal = createSnake();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 28:
-                    animal = createSpider();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 29:
-                    animal = createTiger();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 30:
-                    animal = createToucan();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 31:
-                    animal = createTurtle();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 32:
-                    animal = createWhale();
-                    animalsList.add(animal);
-                    break;
-                    
-                case 33:
-                    animal = createWolf();
-                    animalsList.add(animal);
-                    break;
-                    
-            }   
-        
+        Animal animal;
+        for(int i=0; i<quantity;i++){
+            animal = new AnimalFactory().create(randomSpecie(), new Date().toString(),new Date().toString(), randomGender());
+            animal.setName(randomName(animal.getGender()));
+            animalsList.add(animal);
         }
         
         return animalsList;

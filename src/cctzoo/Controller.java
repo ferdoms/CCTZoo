@@ -26,7 +26,7 @@ public class Controller {
      */
     public void start(){
         DataSetup ds = new DataSetup();
-        animalModel = new AnimalModel(ds.generateAnimals(20));
+        animalModel = new AnimalModel(ds.generateAnimals(100));
         view = new AnimalMenu();
         
     }

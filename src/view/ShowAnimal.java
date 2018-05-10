@@ -50,7 +50,7 @@ public class ShowAnimal extends View {
             case "0":
                 return null;
             default:
-                System.out.println("Please make sure to type one of the available options");
+                System.out.println("Unable to indentify the typed option. Please try again.");
                 return new ShowAnimal(this.animal);                
         }
     }

@@ -16,7 +16,6 @@ import ultility.AnimalModel;
 import ultility.DataSetup;
 import interfaces.Mammal;
 import interfaces.MammalAvian;
-import ultility.Epoch;
 import view.SearchAnimalMenu;
 import view.ShowAnimal;
 import view.View;

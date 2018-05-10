@@ -5,6 +5,8 @@
  */
 package animals;
 
+import ultility.Date;
+
 /**
  *
  * @author Fernando Marinho da Silva
@@ -60,10 +62,18 @@ public abstract class Animal {
 
 
     public void setDateOfBirth(String dateOfBirth) {
+        Date today = new Date();
+        Date dOfB = new Date(dateOfBirth);
+        if(today.compareTo(dOfB)){
+            System.out.println("Born in captivete ");   
+        }else{
+            System.out.println("Born in the Zoo");
+        }
         this.dateOfBirth = dateOfBirth;
     }
 
     public void setDateOfArrival(String dateOfArrival) {
+        
         this.dateOfArrival = dateOfArrival;
     }
 
@@ -115,9 +125,9 @@ public abstract class Animal {
                 + "\n Gender =  " + gender + "\n OffSpring = " + OffSpring + "\n Medication = " + medication + ""
                 + "\n Vaccine = " + vaccine + "\n ExhibitnNumber = " + exhibitNumber;
     }
-
-
-
-    
+    private abstract class OffSpring{
+        abstract Animal setOffSpring();
+    }
     
 }
+
