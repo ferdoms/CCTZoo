@@ -41,14 +41,18 @@ public class AnimalMenu extends View{
                 return new ShowAnimalsList(resultList);
             case "3":
                 result = animal().searchByExhibitNumber(getInputWithLabel("Exhibit Number"));
-                return new ShowAnimal(result);
+                if(result == null){
+                    err("No Animal found with the given Exhibition Number");
+                    return this;
+                }
+                return new UpdateAnimal(result); 
             case "9":
                 return new MainMenu();
             case "0":
                 return null;
             default:
                 err("Unable to indentify the typed option. Please try again");
-                return new SearchAnimalMenu();
+                return new AnimalMenu();
         }
     }
     

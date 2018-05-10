@@ -46,21 +46,21 @@ public class ShowKeeperList extends View {
                     err("No keeper found with the given Keeper ID");
                     return this;
                 }
-                return new ShowAnimal(result);
+                return new ShowKeeper(result);
             case "2":
-                result = animal().searchByExhibitNumber(getInputWithLabel("Exhibit Number"));
+                result = keeper().searchByKeeperNumber(getInputWithLabel("Keeper ID"));
                 if(result == null){
-                    err("No Animal found with the given Exhibition Number");
+                    err("No keeper found with the given Keeper ID");
                     return this;
                 }
-                return new UpdateAnimal(result); 
+                return new UpdateKeeper(result); 
             case "9":
-                return new AnimalMenu();
+                return new KeeperMenu();
             case "0":
                 return null;
             default:
                 err("Unable to indentify the typed option. Please try again.");
-                return new ShowAnimalsList(this.animals);                
+                return new ShowKeeperList(this.keepers);                
         }
     }
     
