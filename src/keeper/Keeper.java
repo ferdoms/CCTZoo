@@ -29,6 +29,10 @@ public class Keeper {
        keeperId += 1;//increments Keeper ID by 1
        keeperNumber = Integer.toString(keeperId);//generates keeper identification number
     }
+
+    public Keeper(Keeper keeper) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     /**
     *simple public method get name to get the name attribute and return it when 
     *requested by other methods

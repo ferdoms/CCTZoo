@@ -52,7 +52,7 @@ public class KeeperMenu extends View{
                 return null;
             default:
                 err("Unable to indentify the typed option. Please try again");
-                return new KeeperlMenu();
+                return new KeeperMenu();
         }
     }
     
