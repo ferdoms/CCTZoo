@@ -79,3 +79,57 @@ public class DataSetup {
     }
             
 }
+}
+public String randomKeeperName(){
+        
+            String[] keeperNames = {"Olivia Adler", "Charlotte Anderson", 
+                "Silas Bardot", "Declan Becker", "Oliver Becket", 
+                "Noah Cohen", "Amelia Coleman", "Mia Copeland", 
+                "Emma Davis", "Ava Delaney", "Luna Devlin",
+                "Aria Dixon", "Isabella Duncan", "Arabella Ellis",
+                "Bodhi Finley", "Mason Gibbs", "Jack Griffin", "William Hendrix",
+                "Milo Hepburn", "Owen Hutton", "Jack Jennings", "Ben Jones",
+                "Brian Kennedy", "Maurice Langley", "James Lennon",
+                "John Lincoln", "Carl Miller", "Steven Monroe", "Ana Nash",
+                "Mike Nixon", "Charles Penn", "Alan Smith", "Jack Stone", 
+                "Christy Sullivan", "Noel Sutton", "Glenn Thompson", 
+                "Mark Walker", "Phil West", "Aaron Whiley", "Jonnie Wilson"};
+            int number = rand.nextInt(keeperNames.length);
+            return keeperNames[number];
+        
+        
+    }
+    
+    public ArrayList<Keeper> generateKeepers(int Quantity){
+        
+        ArrayList<Keeper> keeperList;
+        keeperList = new ArrayList<Keeper>();
+        Keeper keeper = null;
+        for(int i=0; i<Quantity;i++){
+
+            switch(rand.nextInt(40)){
+                case 0:
+                    keeper = createKeeper();
+                    keeperList.add(keeper);
+                    break;
+                
+                case 1:
+                    keeper = createKeeper();
+                    keeperList.add(keeper);
+                    break;
+            }
+        }
+        return keeperList;
+    }
+    
+      public Keeper createKeeper(){
+        
+        Keeper keeper = new Keeper();
+        keeper.setName(randomKeeperName());
+        keeper.getName();
+        keeper.getQualification();
+        keeper.getKeeperNumber();
+        return keeper;
+    }
+     
+}
