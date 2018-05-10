@@ -115,9 +115,9 @@ public abstract class Animal {
                 + "\n Gender =  " + gender + "\n OffSpring = " + OffSpring + "\n Medication = " + medication + ""
                 + "\n Vaccine = " + vaccine + "\n ExhibitnNumber = " + exhibitNumber;
     }
-
-
-
-    
+    private abstract class OffSpring{
+        abstract Animal setOffSpring();
+    }
     
 }
+
