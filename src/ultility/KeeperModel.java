@@ -37,7 +37,7 @@ public class KeeperModel {
     public Keeper[] searchByName(String name){
         ArrayList<Keeper> keeperList = new ArrayList<Keeper>();
         for(Keeper keeper:keepers){
-            if(keeper.getName().equals(name)){
+            if(keeper.getName().equalsIgnoreCase(name)){
                 keeperList.add(keeper);
             }
         }

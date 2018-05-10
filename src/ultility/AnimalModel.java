@@ -37,7 +37,7 @@ public class AnimalModel {
     public Animal[] searchByName(String name){
         ArrayList<Animal> resultList = new ArrayList<Animal>();
         for(Animal animal:animals){
-            if(animal.getName().equals(name)){
+            if(animal.getName().equalsIgnoreCase(name)){
                 resultList.add(animal);
             }
         }
@@ -68,7 +68,7 @@ public class AnimalModel {
     public Animal[] searchBySpecie(String specie){
         ArrayList<Animal> resultList = new ArrayList<>();
         for(Animal animal:animals){
-            if(animal.getSpecie().equals(specie)){
+            if(animal.getSpecie().equalsIgnoreCase(specie)){
                 resultList.add(animal);
             }
         }
@@ -78,7 +78,7 @@ public class AnimalModel {
     public Animal[] searchByType(String type){
         ArrayList<Animal> resultList = new ArrayList<>();
         for(Animal animal:animals){
-            if(animal.getType().equals(type)){
+            if(animal.getType().equalsIgnoreCase(type)){
                 resultList.add(animal);
             }
         }
