@@ -81,6 +81,10 @@ public class KeeperModel {
         keepers.set(keepers.indexOf(keeper), keeper);
     }
     
+    public Keeper[] all(){
+        return keepers.toArray(new Keeper[keepers.size()]);
+    }
+    
     // testing class
     public void keeperlist(){
 //        for(Keeper keeper:keepers){

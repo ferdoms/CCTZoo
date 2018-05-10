@@ -12,7 +12,7 @@ package keeper;
 public class Keeper {
     private String name;
     private String[] qualifications;
-    private String[] quantity;
+    private String[] animalsAssigned;
     private static int keeperId = 0;
     private final String keeperNumber;
     
@@ -22,7 +22,7 @@ public class Keeper {
     public Keeper(String name){
        this.name = name;
        qualifications = new String[3];
-       quantity = new String[10];
+       animalsAssigned = new String[10];
        //this.quantity = quantity;
        keeperId += 1;//increments Keeper ID by 1
        keeperNumber = Integer.toString(keeperId);//generates keeper identification number
@@ -104,8 +104,8 @@ public class Keeper {
     }
     
     public boolean isAvailable(){
-        for(int i=0; i < this.quantity.length; i++){
-            if(this.quantity[i] == null){
+        for(int i=0; i < this.animalsAssigned.length; i++){
+            if(this.animalsAssigned[i] == null){
                 return true;
         }   
       }
@@ -113,9 +113,9 @@ public class Keeper {
     }
     
     public void assignAnimal(String onemore){
-        for(int i=0; i < this.quantity.length;i++){
-           if(this.quantity[i] == null){
-              this.quantity[i] = onemore;
+        for(int i=0; i < this.animalsAssigned.length;i++){
+           if(this.animalsAssigned[i] == null){
+              this.animalsAssigned[i] = onemore;
               System.out.println(onemore);
               break;
            }
@@ -124,12 +124,17 @@ public class Keeper {
     
     public void unassignAnimal(String oneless){
         int i;
-        for(i=0; i < this.quantity.length;i++){
-           if(this.quantity[i] == oneless){
-              this.quantity[i] = null;
+        for(i=0; i < this.animalsAssigned.length;i++){
+           if(this.animalsAssigned[i] == oneless){
+              this.animalsAssigned[i] = null;
               break;
            }
         }
+    }
+    
+    public String shortInfo(){
+        return this.getKeeperNumber() + " - " + this.getName() + " - " + 
+                this.getQualification();
     }
     
     /**
@@ -139,10 +144,10 @@ public class Keeper {
     @Override
     public String toString(){
         String keeperInformation = "";
-        keeperInformation = "Keeper identification number: " + keeperNumber
-                + "\nName: " + name 
+        keeperInformation = "Keeper identification number: " + getKeeperNumber()
+                + "\nName: " + getName() 
                 + "\nQualification: " + getQualification() 
-                + "\nResponsible for " + quantity +" animals in the zoo";
+                + "\nResponsible for " + animalsAssigned + " animals in the zoo";
         
         return keeperInformation;//show (return) data to the screen 
     }
