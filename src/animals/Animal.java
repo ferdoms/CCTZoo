@@ -5,6 +5,7 @@
  */
 package animals;
 
+import ultility.AnimalFactory;
 import ultility.Date;
 
 /**
@@ -119,7 +120,11 @@ public abstract class Animal {
                 + "\n Vaccine = " + vaccine + "\n ExhibitnNumber = " + exhibitNumber;
     }
     private abstract class OffSpring{
-        abstract Animal setOffSpring();
+        Animal generateOffSpring(String type){
+            AnimalFactory af = new AnimalFactory();
+            return af.create(type, gender, gender, gender)
+            
+        }
     }
     
 }
