@@ -1,23 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
+///*
+// * To change this license header, choose License Headers in Project Properties.
+// * To change this template file, choose Tools | Templates
+// * and open the template in the editor.
+// */
+//package view;
+
 import keeper.Keeper;
+import view.MainMenu;
+import view.View;
 
 /**
  *
  * @author fernandoms
  */
 public class EditQualification extends View{
-
+    private Keeper keeper;
+    
+    public EditQualification(Keeper k){
+        this.keeper = k;
+    
+    }
+        
     @Override
     public void display() {
         System.out.println("====================================================");
         System.out.println();
         System.out.println("Choose Qualification:");
+        System.out.println();
+        System.out.println(keeper.shortInfo());
         System.out.println();
         System.out.println("1-Aquatic");
         System.out.println("2-Avian");
@@ -35,55 +47,41 @@ public class EditQualification extends View{
 
     @Override
     public View getOpt() {
-        Keeper qualification;
-        Keeper[] qualificationList;
         
         switch(getInputWithLabel("Option")){
             case "1":
-                qualification = Keeper.setQualification();
-                return new SearchKeeperMenu();
+                keeper.setQualification("Aquatic");
+                return new EditQualification(keeper);
             case "2":
-                resultList = keeper().all();
-                return new ShowKeeperList(resultList);
+                keeper.setQualification("Avian");
+                return new EditQualification(keeper);
             case "3":
-                result = keeper().searchByKeeperNumber(getInputWithLabel("Keeper ID"));
-                if(result == null){
-                    err("No keeper found with the given Keeper ID");
-                    return this;
-                }
-                return new UpdateKeeper(result);
-                case "1":
-                return new SearchKeeperMenu();
-            case "2":
-                resultList = keeper().all();
-                return new ShowKeeperList(resultList);
-            case "3":
-                result = keeper().searchByKeeperNumber(getInputWithLabel("Keeper ID"));
-                if(result == null){
-                    err("No keeper found with the given Keeper ID");
-                    return this;
-                }
-                return new UpdateKeeper(result);
-                
-            case "2":
-                resultList = keeper().all();
-                return new ShowKeeperList(resultList);
-            case "3":
-                result = keeper().searchByKeeperNumber(getInputWithLabel("Keeper ID"));
-                if(result == null){
-                    err("No keeper found with the given Keeper ID");
-                    return this;
-                }
-                return new UpdateKeeper(result);
+                keeper.setQualification("Insect");
+                return new EditQualification(keeper);
+            case "4":
+                keeper.setQualification("Mammal");
+                return new EditQualification(keeper);
+            case "5":
+                keeper.setQualification("Mammal Aquatic");
+                return new EditQualification(keeper);
+            case "6":
+                keeper.setQualification("Mammal Avian");
+                return new EditQualification(keeper);
+            case "7":
+                keeper.setQualification("Reptile");
+                return new EditQualification(keeper);
+            case "8":
+                keeper.setQualification("Reptile Aquatic");
+                return new EditQualification(keeper);
             case "9":
                 return new MainMenu();
             case "0":
                 return null;
             default:
                 err("Unable to indentify the typed option. Please try again");
-                return new EditQualification();
+                return new EditQualification(keeper);
         }
     }
     }
     
-}
+
