@@ -35,7 +35,7 @@ public class KeeperMenu extends View{
         
         switch(getInputWithLabel("Option")){
             case "1":
-                return new SearchKeeperMenu();
+                //return new SearchKeeperMenu();
             case "2":
                 resultList = keeper().all();
                 return new ShowKeeperList(resultList);
@@ -52,7 +52,7 @@ public class KeeperMenu extends View{
                 return null;
             default:
                 err("Unable to indentify the typed option. Please try again");
-                return new KeeperlMenu();
+                return new KeeperMenu();
         }
     }
     

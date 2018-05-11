@@ -26,7 +26,7 @@ public class ShowKeeperList extends View {
         System.out.println("Animals List:");
         System.out.println();
         for(Keeper keeper:keepers){
-            System.out.print(keeper.shortInfo());
+            System.out.println(keeper.shortInfo());
         }
         System.out.println();
         System.out.println("1-Detailed Info    2-Update Info    9-Return    0-Exit");
@@ -46,7 +46,8 @@ public class ShowKeeperList extends View {
                     err("No keeper found with the given Keeper ID");
                     return this;
                 }
-                return new ShowKeeper(result);
+                System.out.println("new ShowKeeper(result)");
+                return this;
             case "2":
                 result = keeper().searchByKeeperNumber(getInputWithLabel("Keeper ID"));
                 if(result == null){

@@ -9,8 +9,7 @@ import animals.Animal;
 import ultility.AnimalModel;
 import ultility.DataSetup;
 import ultility.KeeperModel;
-import view.AnimalMenu;
-import view.View;
+import view.*;
 
 /**
  * Purpose: it control the basics of the system, setup data, updates the view and
@@ -30,7 +29,7 @@ public class Controller {
         DataSetup ds = new DataSetup();
         animalModel = new AnimalModel(ds.generateAnimals(100));
         keeperModel = new KeeperModel(ds.generateKeepers(100));
-        view = new AnimalMenu();
+        view = new KeeperMenu();
         
     }
 

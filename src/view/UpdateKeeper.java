@@ -6,7 +6,8 @@
 package view;
 
 import animals.Animal;
-import ultility.Date;
+import keeper.Keeper;
+
 
 /**
  *
@@ -25,10 +26,15 @@ public class UpdateKeeper extends View {
         System.out.println("Update keeper info:");
         System.out.println();
         System.out.println(keeper.shortInfo());
+        System.out.println("This is responsable for " + keeper.getAmountOfAnimals() + "animal(s)");
         System.out.println();
-        System.out.println("1-Qualification: " + animal.getDateOfArrival());
-        System.out.println("2-Birth date:   " + animal.getDateOfBirth());
-        System.out.println("3-Vacine:       " + animal.isVaccinated());
+        for(String aExhibitNumber:keeper.getAnimalsAssigned()){
+            System.out.println("  "+ animal().searchByExhibitNumber(aExhibitNumber).shortInfo());
+        }
+        System.out.println();
+        System.out.println("1-Qualification: " + keeper.getQualification());
+        System.out.println("2-Assign Animal");
+        System.out.println("3-Unassing Animal");
         System.out.println();
         System.out.println("0-Return");
         System.out.println();
@@ -37,41 +43,31 @@ public class UpdateKeeper extends View {
 
     @Override
     public View getOpt() {
-        String day;
-        String month;
-        String year;
-        String date;
-        
         switch(getInputWithLabel("Option")){
             case "1":
-                System.out.println("Arrival date:");
-                day = getInputWithLabel("Day");
-                month = getInputWithLabel("Month");
-                year = getInputWithLabel("Year");
-                
-                date = year + "-" + month + "-" + day;
-                animal.setDateOfArrival(date);
-                
-                return new UpdateKeeper(this.animal);
+                if(keeper.getAmountOfAnimals()!=0){
+                    err("This keeper must have no assigned Animal to change its qualification.");
+                    return new UpdateKeeper(this.keeper);
+                }
+                System.out.println("new ChangeQualification(this.keeper)");
+                return this;
             case "2":
-                System.out.println("Birth date:");
-                day = getInputWithLabel("Day");
-                month = getInputWithLabel("Month");
-                year = getInputWithLabel("Year");
+                Animal result = animal().searchByExhibitNumber(getInputWithLabel("Exhibit Number"));
+                if(result == null){
+                    err("No Animal found with the given Exhibition Number");
+                    return this;
+                }
+                if(!keeper.assignAnimal(result)){
+                    err("Can't assign");
+                    
+                }
                 
-                date = year + "-" + month + "-" + day;
-                
-                
-                animal.setDateOfArrival(date);
-                
-                
-                
-                return new UpdateKeeper(this.animal);  
+                return new UpdateKeeper(this.keeper);  
             case "0":
-                return new ShowAnimal(this.animal);
+                //return new ShowKeeper(this.keeper);
             default:
                 System.out.println("Please make sure to type one of the available options");
-                return new UpdateKeeper(this.animal);
+                return new UpdateKeeper(this.keeper);
         }
     }
     
