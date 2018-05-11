@@ -22,6 +22,7 @@ public class KeeperMenu extends View{
         System.out.println("1-Search Menu");
         System.out.println("2-List Keepers");
         System.out.println("3-Update Keeper");
+        System.out.println("4-Add Keeper");
         System.out.println();
         System.out.println("9-Return");
         System.out.println("0-Exit");
@@ -46,6 +47,9 @@ public class KeeperMenu extends View{
                     return this;
                 }
                 return new UpdateKeeper(result);
+            case "4":
+                keeper().save(new Keeper(getInputWithLabel("Please type Keeper's full name")));
+                return new KeeperMenu();
             case "9":
                 return new MainMenu();
             case "0":
