@@ -64,7 +64,7 @@ public class UpdateKeeper extends View {
                 
                 return new UpdateKeeper(this.keeper);  
             case "0":
-                //return new ShowKeeper(this.keeper);
+                return new ShowKeeper(this.keeper);
             default:
                 System.out.println("Please make sure to type one of the available options");
                 return new UpdateKeeper(this.keeper);

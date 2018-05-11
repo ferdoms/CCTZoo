@@ -29,6 +29,14 @@ public class Keeper {
        keeperId += 1;//increments Keeper ID by 1
        keeperNumber = Integer.toString(keeperId);//generates keeper identification number
     }
+
+    public Keeper() {
+       keeperId += 1; 
+       keeperNumber = Integer.toString(keeperId);
+    }
+
+    
+
     /**
     *simple public method get name to get the name attribute and return it when 
     *requested by other methods
@@ -76,7 +84,7 @@ public class Keeper {
      * @param Name
      */
     public void setName(String Name){
-        this.name = name;
+        this.name = Name;
     }
     /**
     *getKeeperNumber returns keeper identification number
@@ -167,7 +175,7 @@ public class Keeper {
         keeperInformation = "Keeper identification number: " + getKeeperNumber()
                 + "\nName: " + getName() 
                 + "\nQualification: " + getQualification() 
-                + "\nResponsible for " + animalsAssigned + " animals in the zoo";
+                + "\nResponsible for " + getAmountOfAnimals() + " animals in the zoo";
         
         return keeperInformation;//show (return) data to the screen 
     }

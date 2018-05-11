@@ -45,8 +45,6 @@ public class DataSetup {
     
     public String randomSpecie(){
         
-
-
         String[] species = {"Bat", "Bear", "Bee", "Bird", "Butterfly", 
             "Cat", "Crocodile", "Deer", "Dog", "Fish", "Frog", "Giraffe",
             "Grasshopper", "Hippopotamus", "Horse", "Lion", "Lizard", "Monkey",
@@ -114,12 +112,12 @@ public class DataSetup {
         
     }
     
-    public ArrayList<Keeper> generateKeepers(int Quantity){
+    public ArrayList<Keeper> generateKeepers(int quantity){
         
         ArrayList<Keeper> keeperList;
         keeperList = new ArrayList<Keeper>();
         Keeper keeper = null;
-        for(int i=0; i<Quantity;i++){
+        for(int i=0; i<quantity;i++){
         
         keeper = createKeeper();
         keeperList.add(keeper);
@@ -133,5 +131,24 @@ public class DataSetup {
         Keeper keeper = new Keeper(randomKeeperName());
         return keeper;
     }
-     
+      
+      
+        public String randomQualification(){
+            
+            String[] types = {"Aquatic", "avian", 
+                "Insect", "Mammal", "Mammal Aquatic", "Mammal Avian",
+                "Reptile", "Reptile Aquatic" };
+            
+            int nType = rand.nextInt(types.length); 
+            return types[nType];
+    }
+        
+        public Keeper createQualification(){
+            for(int i = 0; i < keeperList.length; i++ ){
+                if(this.keeperList[i] == null)
+                Keeper typeOfQualification = new Keeper(randomQualification());
+                
+            }
+            return typeOfQualification;
+    }
 }

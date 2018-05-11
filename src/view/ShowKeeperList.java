@@ -23,11 +23,12 @@ public class ShowKeeperList extends View {
     public void display() {
         System.out.println("====================================================");
         System.out.println();
-        System.out.println("Animals List:");
+        System.out.println("Keeper List:");
         System.out.println();
         for(Keeper keeper:keepers){
             System.out.println(keeper.shortInfo());
         }
+        System.out.println();
         System.out.println();
         System.out.println("1-Detailed Info    2-Update Info    9-Return    0-Exit");
         System.out.println();
