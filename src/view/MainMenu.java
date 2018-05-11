@@ -15,7 +15,7 @@ public class MainMenu extends View{
     public void display() {
         System.out.println("====================================================");
         System.out.println();
-        System.out.println("########## Welcomo to CCTZoo ##########");
+        System.out.println("########## Welcome to CCTZoo ##########");
         System.out.println();
         System.out.println("1-Keeper Menu");
         System.out.println("2-Animal Menu");

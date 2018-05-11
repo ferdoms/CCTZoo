@@ -48,8 +48,8 @@ public class KeeperMenu extends View{
                 }
                 return new UpdateKeeper(result);
             case "4":
-                String name = getInputWithLabel("Please type first name")
-                    + " " + getInputWithLabel("Please type Keeper's full name");
+                String name = getInputWithLabel("Please type Keeper's first name")
+                    + " " + getInputWithLabel("Please type Keeper's last name");
                 Keeper newKeeper = new Keeper(name);
                 keeper().save(newKeeper);
                 return new UpdateKeeper(newKeeper);

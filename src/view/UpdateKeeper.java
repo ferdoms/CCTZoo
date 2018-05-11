@@ -64,7 +64,7 @@ public class UpdateKeeper extends View {
                     return this;
                 }
                 if(!keeper.assignAnimal(result)){
-                    err("Can't assign the animal because: \n  keeper doesn't care for this type;\n  keeper has already 10 animals to care for; \n  this animals has already been assigned to this Keeper");
+                    err("Can't assign the animal because: \n  keeper has no qualification for this type;\n  keeper has already 10 animals to care for; \n  this animals has already been assigned to this Keeper");
                     
                 }
                 
