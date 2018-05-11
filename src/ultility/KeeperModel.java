@@ -5,6 +5,7 @@
  */
 package ultility;
 
+import animals.Animal;
 import java.util.ArrayList;
 import keeper.Keeper;
 
@@ -91,5 +92,18 @@ public class KeeperModel {
 //            System.out.println(keeper.getQualification()+ " - " + keeper.getName() 
 //                    + " The " + keeper.keeperNumber();
 //        }
+    }
+    
+    public void autoAssignAnimals(AnimalModel am){
+
+        for(Animal animal:am.all()){
+            for(Keeper keeper:keepers){
+                if(keeper.isAvailable() && keeper.hasQualification(animal.getType())){
+                    keeper.assignAnimal(animal);
+                    break;
+                }
+            }
+        }
+
     }
 }

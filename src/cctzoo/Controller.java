@@ -27,8 +27,9 @@ public class Controller {
      */
     public void start(){
         DataSetup ds = new DataSetup();
-        animalModel = new AnimalModel(ds.generateAnimals(100));
-        keeperModel = new KeeperModel(ds.generateKeepers(100));
+        animalModel = new AnimalModel(ds.generateAnimals(300));
+        keeperModel = new KeeperModel(ds.generateKeepers(40));
+        keeperModel.autoAssignAnimals(animalModel);
         view = new MainMenu();
         
     }

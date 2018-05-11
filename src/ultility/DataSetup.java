@@ -141,22 +141,14 @@ public class DataSetup {
     }
       
       
-        public String randomQualification(){
-            
-            String[] types = {"Aquatic", "Avian", 
-                "Insect", "Mammal", "MammalAquatic", "MammalAvian",
-                "Reptile", "ReptileAquatic" };
-            
-            int nType = rand.nextInt(types.length); 
-            return types[nType];
+    public String randomQualification(){
+
+        String[] types = {"Aquatic", "Avian", 
+            "Insect", "Mammal", "MammalAquatic", "MammalAvian",
+            "Reptile", "ReptileAquatic" };
+
+        int nType = rand.nextInt(types.length); 
+        return types[nType];
     }
-        
-//        public Keeper createQualification(){
-//            for(int i = 0; i < keeperList.length; i++ ){
-//                if(this.keeperList[i] == null)
-//                Keeper typeOfQualification = new Keeper(randomQualification());
-//                
-//            }
-//            return typeOfQualification;
-//    }
+
 }

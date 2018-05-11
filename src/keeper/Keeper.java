@@ -145,10 +145,8 @@ public class Keeper {
                     }
                 } 
             }
-            System.out.println("limite de animais");
             return false;
         }
-        System.out.println("nao tem qualific");
         return false;
     }
     public boolean careFor(Animal animal){
@@ -172,7 +170,8 @@ public class Keeper {
     }
     
     public String shortInfo(){
-        return this.getKeeperNumber() + " - " + this.getName() + " - " + 
+        return this.getKeeperNumber() + " - " + this.getName() + " - " +
+                "Responsible for " + getAmountOfAnimals() + " of types:"+ 
                 this.getQualification();
     }
     

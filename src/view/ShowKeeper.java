@@ -34,6 +34,11 @@ public class ShowKeeper extends View{
             
             System.out.println();
             System.out.println(keeper.toString());
+            for(String aExhibitNumber:keeper.getAnimalsAssigned()){
+                if(aExhibitNumber!=null){
+                System.out.println("  "+ animal().searchByExhibitNumber(aExhibitNumber).shortInfo());
+                }
+            }
         }
         System.out.println();
         System.out.println("1-Return    2-Update Info    0-Exit");
