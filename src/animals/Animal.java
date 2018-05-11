@@ -118,11 +118,12 @@ public abstract class Animal {
     @Override
     public String toString() {
         return "Animal info:" 
-                + "\n Name = " + name + " the " + getSpecie()
-                + "\n Type = " + getType()
-                + "\n Date Of Birth = " + dateOfBirth + "\n Date Of Arrival = " + dateOfArrival + ""
-                + "\n Gender =  " + gender + "\n OffSpring = " + OffSpring + "\n Medication = " + medication + ""
-                + "\n Vaccine = " + vaccine + "\n ExhibitnNumber = " + exhibitNumber;
+                + "\n Name: " + name + " the " + getSpecie()
+                + "\n Type: " + getType()
+                + "\n Date Of Birth: " + dateOfBirth + "\n Date Of Arrival: " + dateOfArrival + ""
+                + "\n Gender:  " + gender + "\n Medication: " + medication + ""
+                + "\n Vaccine: " + vaccine + "\n ExhibitnNumber: " + exhibitNumber
+                + "\n OffSpring: " + getOffSpring().length;
     }
 //    private abstract class OffSpring{
 //        Random rand =  new Random();

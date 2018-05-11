@@ -6,6 +6,7 @@
 package view;
 
 import animals.Animal;
+import ultility.AnimalFactory;
 import ultility.Date;
 
 /**
@@ -28,9 +29,13 @@ public class UpdateAnimal extends View {
         System.out.println();
         System.out.println("1-Arrival date (yyyy-mm-dd): " + animal.getDateOfArrival());
         System.out.println("2-Birth date (yyyy-mm-dd): " + animal.getDateOfBirth());
-        System.out.println("3-Vacine:       " + animal.isVaccinated());
-        System.out.println("3-Medication:       " + animal.getMedication());
-        System.out.println("3-Offspring:       " + animal.getOffSpring().length);
+        System.out.println("3-Vacine: " + animal.isVaccinated());
+        System.out.println("4-Medication: " + animal.getMedication());
+        System.out.println("5-Offspring: " + animal.getOffSpring().length);
+        for(String aExhibitNumber:animal.getOffSpring()){
+            if(aExhibitNumber!=null){
+                System.out.println("  "+ animal().searchByExhibitNumber(aExhibitNumber).shortInfo());}
+        }
         System.out.println();
         System.out.println("0-Return");
         System.out.println();
@@ -39,19 +44,15 @@ public class UpdateAnimal extends View {
 
     @Override
     public View getOpt() {
-        String day;
-        String month;
-        String year;
-        String date;
-        
+                
         switch(getInputWithLabel("Option")){
             case "1":
                 try {
                     Date dateInput = new Date(getInputWithLabel("Arrival date (yyyy-mm-dd)"));
-                    if(dateInput.compareTo(animal.getDateOfBirth())){
-                        err("Arrivel date must be equals or after the date of birth.");
-                    }else{
+                    if(animal.getDateOfBirth().compareTo(dateInput)){
                         animal.setDateOfArrival(dateInput);
+                    }else{
+                        err("Arrivel date must be equals or after the date of birth.");
                     }
                 }catch(Exception e){
                     err("Given date is invalid. Please try again.");
@@ -61,10 +62,10 @@ public class UpdateAnimal extends View {
             case "2":
                 try {
                     Date dateInput = new Date(getInputWithLabel("Birth date (yyyy-mm-dd)"));
-                    if(this.animal.getDateOfBirth().compareTo(dateInput)){
-                        err("Birth date must be equals or after the date of Arrival.");
+                    if(dateInput.compareTo(this.animal.getDateOfArrival())){
+                        this.animal.setDateOfBirth(dateInput);
                     }else{
-                        this.animal.setDateOfArrival(dateInput);
+                        err("Birth date must be equals or before the date of Arrival.");
                     }
                 }catch(Exception e){
                     err("Given date is invalid. Please try again.");
@@ -76,9 +77,14 @@ public class UpdateAnimal extends View {
             case "4":
                 return new ShowAnimal(this.animal);
             case "5":
+                AnimalFactory offspring = new AnimalFactory();
+                String gender = getInputWithLabel("Gender");
+                Animal newAnimal = offspring.create(animal.getSpecie(), new Date(), new Date(), gender);
+                animal().save(newAnimal);
+                this.animal.setOffSpring(newAnimal);
                 return new ShowAnimal(this.animal);
             case "9":
-                return new ShowAnimal(this.animal);
+                return new AnimalMenu();
             case "0":
                 return new ShowAnimal(this.animal);
             default:
