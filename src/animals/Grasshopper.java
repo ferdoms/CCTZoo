@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.Insect;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Grasshopper extends Animal implements Insect{
 
-    public Grasshopper(String dateOfBirth, String dateOfArrival, String gender) {
+    public Grasshopper(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

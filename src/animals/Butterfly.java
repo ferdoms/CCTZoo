@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.Insect;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Butterfly extends Animal implements Insect{
 
-    public Butterfly(String dateOfBirth, String dateOfArrival, String gender) {
+    public Butterfly(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

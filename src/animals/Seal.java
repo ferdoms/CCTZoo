@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.MammalAquatic;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Seal extends Animal implements MammalAquatic{
 
-    public Seal(String dateOfBirth, String dateOfArrival, String gender) {
+    public Seal(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

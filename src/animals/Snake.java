@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.Reptile;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Snake extends Animal implements Reptile{
 
-    public Snake(String dateOfBirth, String dateOfArrival, String gender) {
+    public Snake(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

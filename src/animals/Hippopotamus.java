@@ -7,14 +7,15 @@ package animals;
 
 import interfaces.Mammal;
 import interfaces.MammalAquatic;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Hippopotamus extends Animal implements MammalAquatic{
 
-    public Hippopotamus(String dateOfBirth, String dateOfArrival, String gender) {
+    public Hippopotamus(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

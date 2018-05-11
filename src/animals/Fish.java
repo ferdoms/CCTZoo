@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.Aquatic;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Fish extends Animal implements Aquatic{
 
-    public Fish(String dateOfBirth, String dateOfArrival, String gender) {
+    public Fish(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

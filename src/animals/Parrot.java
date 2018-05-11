@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.Avian;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Parrot extends Animal implements Avian{
 
-    public Parrot(String dateOfBirth, String dateOfArrival, String gender) {
+    public Parrot(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

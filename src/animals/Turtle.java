@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.ReptileAquatic;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Turtle extends Animal implements ReptileAquatic{
 
-    public Turtle(String dateOfBirth, String dateOfArrival, String gender) {
+    public Turtle(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

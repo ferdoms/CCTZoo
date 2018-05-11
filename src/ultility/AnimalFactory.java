@@ -16,7 +16,7 @@ import java.util.Random;
  */
 public class AnimalFactory {
 
-    public Animal create(String animal, String dateOfBirth,String dateOfArrival,String gender){
+    public Animal create(String animal, Date dateOfBirth, Date dateOfArrival,String gender){
         switch(animal){
             case "Bat":
                 return new Bat(dateOfBirth, dateOfArrival, gender);

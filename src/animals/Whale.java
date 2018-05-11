@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.MammalAquatic;
+import ultility.Date;
 
 /**
  *
- * @author macbookair
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Whale extends Animal implements MammalAquatic{
 
-    public Whale(String dateOfBirth, String dateOfArrival, String gender) {
+    public Whale(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 
