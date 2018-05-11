@@ -34,7 +34,7 @@ public class UpdateKeeper extends View {
         }
 
         System.out.println();
-        System.out.println("1-Qualification(s): " + keeper.getQualification());
+        System.out.println("1-Add Qualifications");
         System.out.println("2-Assign Animal");
         System.out.println("3-Unassing Animal");
         System.out.println();
@@ -52,9 +52,11 @@ public class UpdateKeeper extends View {
                 if(keeper.getAmountOfAnimals()!=0){
                     err("This keeper must have no assigned Animal to change its qualification.");
                     return new UpdateKeeper(this.keeper);
-                }
-                System.out.println("new ChangeQualification(this.keeper)");
-                return this;
+                }else if(keeper.getAmountOfQualification() == 3){
+                    err("keeper aready have 3 qualifications.");
+                    return new UpdateKeeper(this.keeper);
+                }                
+                return new AddQualification(this.keeper);
             case "2":
                 Animal result = animal().searchByExhibitNumber(getInputWithLabel("Exhibit Number"));
                 if(result == null){

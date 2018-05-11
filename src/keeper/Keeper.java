@@ -61,10 +61,20 @@ public class Keeper {
         }
         return result;
     }
+    public int getAmountOfQualification(){
+        int result = 0;
+        for(int i = 0; i < qualifications.length; i++){
+            if(this.qualifications[i] != null){
+              result++;
+        }
+       }
+        return result;
+    }
     /**
     *purpose:getAmountOfAnimals method returns the total number of animals assigned to 
     * every keeper and its direct linked to identification number.
     */
+    
     public int getAmountOfAnimals(){
         int result = 0;
         for(int i = 0; i < animalsAssigned.length; i++){

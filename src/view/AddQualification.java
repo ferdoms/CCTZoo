@@ -15,10 +15,10 @@ import view.View;
  *
  * @author fernandoms
  */
-public class EditQualification extends View{
+public class AddQualification extends View{
     private Keeper keeper;
     
-    public EditQualification(Keeper k){
+    public AddQualification(Keeper k){
         this.keeper = k;
     
     }
@@ -51,35 +51,35 @@ public class EditQualification extends View{
         switch(getInputWithLabel("Option")){
             case "1":
                 keeper.setQualification("Aquatic");
-                return new EditQualification(keeper);
+                return new AddQualification(keeper);
             case "2":
                 keeper.setQualification("Avian");
-                return new EditQualification(keeper);
+                return new AddQualification(keeper);
             case "3":
                 keeper.setQualification("Insect");
-                return new EditQualification(keeper);
+                return new AddQualification(keeper);
             case "4":
                 keeper.setQualification("Mammal");
-                return new EditQualification(keeper);
+                return new AddQualification(keeper);
             case "5":
-                keeper.setQualification("Mammal Aquatic");
-                return new EditQualification(keeper);
+                keeper.setQualification("MammalAquatic");
+                return new AddQualification(keeper);
             case "6":
-                keeper.setQualification("Mammal Avian");
-                return new EditQualification(keeper);
+                keeper.setQualification("MammalAvian");
+                return new AddQualification(keeper);
             case "7":
                 keeper.setQualification("Reptile");
-                return new EditQualification(keeper);
+                return new AddQualification(keeper);
             case "8":
-                keeper.setQualification("Reptile Aquatic");
-                return new EditQualification(keeper);
+                keeper.setQualification("ReptileAquatic");
+                return new AddQualification(keeper);
             case "9":
-                return new MainMenu();
+                return new KeeperMenu();
             case "0":
                 return null;
             default:
                 err("Unable to indentify the typed option. Please try again");
-                return new EditQualification(keeper);
+                return new AddQualification(keeper);
         }
     }
     }

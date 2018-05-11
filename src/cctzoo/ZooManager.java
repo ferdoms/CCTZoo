@@ -17,7 +17,11 @@ public class ZooManager {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        Controller ctrl = new Controller();
+        ctrl.start();
+        while(!ctrl.exit()){
+        ctrl.update();
+        }
         
     }
     
