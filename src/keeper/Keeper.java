@@ -100,14 +100,15 @@ public class Keeper {
     * because a Keeper can be qualificated at a maximum of three types 
     * of animals
     */
-    public void setQualification(String qualification){
+    public boolean setQualification(String qualification){
         int i;
         for(i=0; i < this.qualifications.length;i++){
            if(this.qualifications[i] == null){
               this.qualifications[i] = qualification;
-              break;
+              return true;
            }
         }
+        return false;
     }
     /**
     *Method isAvailable validates data when any keeper is going to be assigned
@@ -118,7 +119,7 @@ public class Keeper {
     
     public boolean hasQualification(String qualification){
         for(String q:qualifications){
-           if(q == qualification){
+           if(qualification.equals(q)){
               return true;
            }
         }
@@ -136,7 +137,7 @@ public class Keeper {
     
     public boolean assignAnimal(Animal animal){
         if(hasQualification(animal.getType())){
-            if(getAmountOfAnimals() < 10){
+            if(isAvailable()&& !careFor(animal)){
                for(int i=0; i < this.animalsAssigned.length;i++){
                if(this.animalsAssigned[i] == null){
                     this.animalsAssigned[i] = animal.getExhibitNumber();
@@ -144,15 +145,25 @@ public class Keeper {
                     }
                 } 
             }
+            System.out.println("limite de animais");
             return false;
+        }
+        System.out.println("nao tem qualific");
+        return false;
+    }
+    public boolean careFor(Animal animal){
+        for(String aExhibitNumber:animalsAssigned){
+           if(animal.getExhibitNumber().equals(aExhibitNumber)){
+              return true;
+           }
         }
         return false;
     }
     
-    public boolean unassignAnimal(String oneless){
+    public boolean unAssignAnimal(String oneless){
         int i;
         for(i=0; i < this.animalsAssigned.length;i++){
-           if(this.animalsAssigned[i] == oneless){
+           if(oneless.equals(this.animalsAssigned[i])){
               this.animalsAssigned[i] = null;
               return true;
            }

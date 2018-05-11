@@ -70,7 +70,7 @@ public class UpdateAnimal extends View {
             case "0":
                 return new ShowAnimal(this.animal);
             default:
-                System.out.println("Please make sure to type one of the available options");
+                err("Unable to indentify the typed option. Please try again.");
                 return new UpdateAnimal(this.animal);
         }
     }

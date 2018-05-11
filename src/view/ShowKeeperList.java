@@ -47,8 +47,7 @@ public class ShowKeeperList extends View {
                     err("No keeper found with the given Keeper ID");
                     return this;
                 }
-                System.out.println("new ShowKeeper(result)");
-                return this;
+                return new ShowKeeper(result);
             case "2":
                 result = keeper().searchByKeeperNumber(getInputWithLabel("Keeper ID"));
                 if(result == null){

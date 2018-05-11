@@ -35,7 +35,7 @@ public class KeeperMenu extends View{
         
         switch(getInputWithLabel("Option")){
             case "1":
-                //return new SearchKeeperMenu();
+                return new SearchKeeperMenu();
             case "2":
                 resultList = keeper().all();
                 return new ShowKeeperList(resultList);

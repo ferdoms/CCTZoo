@@ -29,7 +29,7 @@ public class Controller {
         DataSetup ds = new DataSetup();
         animalModel = new AnimalModel(ds.generateAnimals(100));
         keeperModel = new KeeperModel(ds.generateKeepers(100));
-        view = new KeeperMenu();
+        view = new MainMenu();
         
     }
 

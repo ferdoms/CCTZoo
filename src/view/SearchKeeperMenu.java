@@ -19,7 +19,7 @@ public class SearchKeeperMenu extends View{
         System.out.println();
         System.out.println("Search Keeper:");
         System.out.println();
-        System.out.println("1-By Keeper Number");
+        System.out.println("1-By Keeper ID");
         System.out.println("2-By Name");
         System.out.println();
         System.out.println("9-Return");
@@ -33,22 +33,22 @@ public class SearchKeeperMenu extends View{
         Keeper[] keeperList;
         switch(getInputWithLabel("Option")){
             case "1":
-                resultKeeper = keeper().searchByKeeperNumber(getInputWithLabel("Keeper Number"));
+                resultKeeper = keeper().searchByKeeperNumber(getInputWithLabel("Keeper ID"));
                 if(resultKeeper == null){
-                    err("No Keeper found with the given Keeper Number");
+                    err("No Keeper found with the given Keeper ID");
                     return this;
                 }
                 return new ShowKeeper(resultKeeper);
             case "2":
                 keeperList = keeper().searchByName(getInputWithLabel("Name"));
                 if(keeperList == null){
-                    err("No Animal found with the given Name");
+                    err("No Keeper found with the given Name");
                     return this;
                 }
                 return new ShowKeeperList(keeperList);
-            case "3":
-                return new AnimalMenu();
-            case "4":
+            case "9":
+                return new KeeperMenu();
+            case "0":
                 return null;
             default:
                 err("Unable to indentify the typed option. Please try again.");

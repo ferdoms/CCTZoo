@@ -50,7 +50,7 @@ public class ShowKeeper extends View{
             case "0":
                 return null;
             default:
-                System.out.println("Unable to indentify the typed option. Please try again.");
+                err("Unable to indentify the typed option. Please try again.");
                 return new ShowKeeper(this.keeper); 
         }
     }
