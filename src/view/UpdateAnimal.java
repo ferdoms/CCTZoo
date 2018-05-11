@@ -26,8 +26,8 @@ public class UpdateAnimal extends View {
         System.out.println();
         System.out.println(animal.shortInfo());
         System.out.println();
-        System.out.println("1-Arrival date: " + animal.getDateOfArrival());
-        System.out.println("2-Birth date:   " + animal.getDateOfBirth());
+        System.out.println("1-Arrival date (yyyy-mm-dd): " + animal.getDateOfArrival());
+        System.out.println("2-Birth date (yyyy-mm-dd): " + animal.getDateOfBirth());
         System.out.println("3-Vacine:       " + animal.isVaccinated());
         System.out.println();
         System.out.println("0-Return");

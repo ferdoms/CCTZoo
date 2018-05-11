@@ -6,6 +6,7 @@
 package animals;
 
 import interfaces.MammalAvian;
+import ultility.Date;
 
 /**
  *
@@ -13,7 +14,7 @@ import interfaces.MammalAvian;
  */
 public class Bat extends Animal implements MammalAvian{
 
-    public Bat(String dateOfBirth, String dateOfArrival, String gender) {
+    public Bat(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 

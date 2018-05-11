@@ -12,8 +12,8 @@ import ultility.Date;
  * @author Fernando Marinho da Silva
  */
 public abstract class Animal {
-    private String dateOfBirth;
-    private String dateOfArrival;
+    private Date dateOfBirth;
+    private Date dateOfArrival;
     private String gender;
     private Integer OffSpring = null;// to Object
     private String medication = null;// to Object
@@ -24,7 +24,7 @@ public abstract class Animal {
     //raca string
     
 
-    public Animal(String dateOfBirth, String dateOfArrival, String gender) {
+    public Animal(Date dateOfBirth, Date dateOfArrival, String gender) {
         this.dateOfBirth = dateOfBirth;
         this.dateOfArrival = dateOfArrival;
         this.gender = gender;
@@ -37,11 +37,11 @@ public abstract class Animal {
     }
 
     public String getDateOfBirth() {
-        return dateOfBirth;
+        return dateOfBirth.toString();
     }
 
     public String getDateOfArrival() {
-        return dateOfArrival;
+        return dateOfArrival.toString();
     }
 
     public String getGender() {
@@ -61,18 +61,11 @@ public abstract class Animal {
     }
 
 
-    public void setDateOfBirth(String dateOfBirth) {
-        Date today = new Date();
-        Date dOfB = new Date(dateOfBirth);
-        if(today.compareTo(dOfB)){
-            System.out.println("Born in captivete ");   
-        }else{
-            System.out.println("Born in the Zoo");
-        }
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public void setDateOfArrival(String dateOfArrival) {
+    public void setDateOfArrival(Date dateOfArrival) {
         
         this.dateOfArrival = dateOfArrival;
     }

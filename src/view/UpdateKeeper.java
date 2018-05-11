@@ -27,8 +27,6 @@ public class UpdateKeeper extends View {
         System.out.println();
         System.out.println(keeper.shortInfo());
         System.out.println();
-        System.out.println("Keeper responsable for " + keeper.getAmountOfAnimals() + " animal(s)");
-        System.out.println();
 
         for(String aExhibitNumber:keeper.getAnimalsAssigned()){
             if(aExhibitNumber!=null){

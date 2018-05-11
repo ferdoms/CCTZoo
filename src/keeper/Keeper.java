@@ -171,7 +171,7 @@ public class Keeper {
     
     public String shortInfo(){
         return this.getKeeperNumber() + " - " + this.getName() + " - " +
-                "Responsible for " + getAmountOfAnimals() + " of types:"+ 
+                "Responsible for " + getAmountOfAnimals() + " animal(s) of types: "+ 
                 this.getQualification();
     }
     
