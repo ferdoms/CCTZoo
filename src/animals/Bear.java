@@ -6,14 +6,15 @@
 package animals;
 
 import interfaces.Mammal;
+import ultility.Date;
 
 /**
  *
- * @author joao-
+ * @author Joao Pedro Haddad Oliveira
  */
 public class Bear extends Animal implements Mammal{
 
-    public Bear(String dateOfBirth, String dateOfArrival, String gender) {
+    public Bear(Date dateOfBirth, Date dateOfArrival, String gender) {
         super(dateOfBirth, dateOfArrival, gender);
     }
 
