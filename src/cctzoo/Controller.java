@@ -30,7 +30,7 @@ public class Controller {
         animalModel = new AnimalModel(ds.generateAnimals(300));
         keeperModel = new KeeperModel(ds.generateKeepers(40));
         keeperModel.autoAssignAnimals(animalModel);
-        view = new MainMenu();
+        view = new AnimalMenu();
         
     }
 

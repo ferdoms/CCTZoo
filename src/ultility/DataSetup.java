@@ -68,7 +68,7 @@ public class DataSetup {
         animalsList = new ArrayList<Animal>();
         Animal animal;
         for(int i=0; i<quantity;i++){
-            animal = new AnimalFactory().create(randomSpecie(), new Date().toString(),new Date().toString(), randomGender());
+            animal = new AnimalFactory().create(randomSpecie(), new Date(), new Date(), randomGender());
             animal.setName(randomName(animal.getGender()));
             animalsList.add(animal);
         }

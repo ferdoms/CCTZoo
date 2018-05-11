@@ -5,6 +5,8 @@
  */
 package animals;
 
+import java.util.ArrayList;
+import java.util.Random;
 import ultility.AnimalFactory;
 import ultility.Date;
 
@@ -16,7 +18,7 @@ public abstract class Animal {
     private Date dateOfBirth;
     private Date dateOfArrival;
     private String gender;
-    private Integer OffSpring = null;// to Object
+    private ArrayList<String> OffSpring = new ArrayList<String>();// to Object
     private String medication = null;// to Object
     private boolean vaccine = false;
     private static int serial = 1000;   
@@ -29,7 +31,6 @@ public abstract class Animal {
         this.dateOfBirth = dateOfBirth;
         this.dateOfArrival = dateOfArrival;
         this.gender = gender;
-        this.OffSpring = 0;
         this.medication = medication;
         this.vaccine = vaccine;
         serial = serial+1;
@@ -37,20 +38,24 @@ public abstract class Animal {
        
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth.toString();
+    public Date getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public String getDateOfArrival() {
-        return dateOfArrival.toString();
+    public Date getDateOfArrival() {
+        return dateOfArrival;
     }
 
     public String getGender() {
         return gender;
     }
 
-    public int getOffSpring() {
-        return OffSpring;
+    public String[] getOffSpring() {
+//        if(OffSpring.isEmpty()){
+//            return null;
+//        }
+//        
+        return OffSpring.toArray(new String[OffSpring.size()]);
     }
 
     public String getMedication() {
@@ -75,8 +80,8 @@ public abstract class Animal {
         this.gender = gender;
     }
 
-    public void setOffSpring(int OffSpring) {
-        this.OffSpring = OffSpring;
+    public void setOffSpring(Animal animal) {
+        this.OffSpring.add(animal.getExhibitNumber());
     }
 
     public void setMedication(String medication) {
@@ -119,13 +124,21 @@ public abstract class Animal {
                 + "\n Gender =  " + gender + "\n OffSpring = " + OffSpring + "\n Medication = " + medication + ""
                 + "\n Vaccine = " + vaccine + "\n ExhibitnNumber = " + exhibitNumber;
     }
-    private abstract class OffSpring{
-        Animal generateOffSpring(String type){
-            AnimalFactory af = new AnimalFactory();
-            return af.create(type, gender, gender, gender)
-            
-        }
-    }
+//    private abstract class OffSpring{
+//        Random rand =  new Random();
+//        
+//        Animal generateOffSpring(String type){
+//            AnimalFactory af = new AnimalFactory();
+//            return af.create(type, new Date(), new Date(), gender);
+//            
+//        }
+//        String randomGender(){
+//            if(rand.nextInt(2) == 1){
+//                return "male";
+//            }
+//            return "female";
+//        }
+//    }
     
 }
 
