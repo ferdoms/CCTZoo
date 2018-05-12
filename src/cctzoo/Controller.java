@@ -5,10 +5,10 @@
  */
 package cctzoo;
 
-import animals.Animal;
-import ultility.AnimalModel;
+import animal.Animal;
+import animal.AnimalModel;
 import ultility.DataSetup;
-import ultility.KeeperModel;
+import keeper.KeeperModel;
 import view.*;
 
 /**

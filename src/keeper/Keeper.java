@@ -5,7 +5,7 @@
  */
 package keeper;
 
-import animals.Animal;
+import animal.Animal;
 
 /**
  *
@@ -133,6 +133,15 @@ public class Keeper {
               return true;
            }
         }
+        return false;
+    }
+    
+    public boolean canQualificate(){
+        for(int i=0; i < this.qualifications.length; i++){
+            if(this.qualifications[i] == null){
+                return true;
+        }   
+      }
         return false;
     }
     

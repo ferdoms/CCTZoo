@@ -25,18 +25,12 @@ public class ShowKeeperList extends View {
         System.out.println();
         System.out.println("Keeper List:");
         System.out.println();
-        int q = 0;
         for(Keeper keeper:keepers){
             System.out.println(keeper.shortInfo());
-            q = q + keeper.getAmountOfAnimals();
         }
-        System.out.println();
-        System.out.println(q);
         System.out.println();
         System.out.println("1-Detailed Info    2-Update Info    9-Return    0-Exit");
         System.out.println();
-        
-        
         
     }
 

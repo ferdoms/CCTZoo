@@ -5,10 +5,11 @@
  */
 package view;
 
-import animals.Animal;
+import animal.Animal;
 import java.util.Scanner;
-import ultility.AnimalModel;
-import ultility.KeeperModel;
+import animal.AnimalModel;
+import keeper.KeeperModel;
+import ultility.AnimalFactory;
 
 /**
  * Purpose: this class was created to standardize methods that all of the VIEWS 
@@ -22,6 +23,7 @@ public abstract class View {
     
     private AnimalModel animalModel;
     private KeeperModel keeperModel;
+    private AnimalFactory animalFactory = new AnimalFactory();
     /**
      * Purpose: abstract method which prints the view to console.
      */
@@ -63,7 +65,7 @@ public abstract class View {
     }
 
     /**
-     *
+     * Fetch data from the models
      * @param a
      */
     public void fetchData(AnimalModel a, KeeperModel k){
@@ -72,18 +74,29 @@ public abstract class View {
     }
 
     /**
-     *
+     * Grant access to animal model and its classes
      * @return 
      */
     public AnimalModel animal(){
         return animalModel;
     }
-    
+    /**
+     * Grant access to keeper model and its classes
+     * @return 
+     */
     public KeeperModel keeper(){
         return keeperModel;
     }
     
+    public AnimalFactory animalFactory(){
+        return animalFactory;
+    }
+    /**
+     * Prints errors to console.
+     * 
+     */
     public void err(String error){
         System.err.println("ERROR: " + error);
     }
+    
 }

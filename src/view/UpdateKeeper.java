@@ -5,7 +5,7 @@
  */
 package view;
 
-import animals.Animal;
+import animal.Animal;
 import keeper.Keeper;
 
 
@@ -62,12 +62,13 @@ public class UpdateKeeper extends View {
                 if(result == null){
                     err("No Animal found with the given Exhibition Number");
                     return this;
+                }else if(!keeper.isAvailable()){
+                    err("Can't assign the animal because keeper has already 10 animals to care for.");
+                }else if(!keeper.hasQualification(result.getType())){
+                     err("Can't assign the animal because keeper has no qualification for this type");
+                }else if(!keeper.assignAnimal(result)){
+                    err("Can't assign the animal because this animals has already been assigned to this Keeper");
                 }
-                if(!keeper.assignAnimal(result)){
-                    err("Can't assign the animal because: \n  keeper has no qualification for this type;\n  keeper has already 10 animals to care for; \n  this animals has already been assigned to this Keeper");
-                    
-                }
-                
                 return new UpdateKeeper(this.keeper);  
             case "3":
                 if(!keeper.unAssignAnimal(getInputWithLabel("Exhibit Number"))){

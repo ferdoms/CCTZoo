@@ -1,12 +1,11 @@
 
-import animals.*;
 import cctzoo.Controller;
 import interfaces.Aquatic;
 import interfaces.Avian;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.FileHandler;
-import ultility.AnimalModel;
+import animal.AnimalModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,6 +15,7 @@ import ultility.AnimalModel;
 import ultility.DataSetup;
 import interfaces.Mammal;
 import interfaces.MammalAvian;
+import ultility.Date;
 import view.SearchAnimalMenu;
 import view.ShowAnimal;
 import view.View;
@@ -67,6 +67,16 @@ public class LabTester {
         while(!ctrl.exit()){
         ctrl.update();
         }
+//
+//          Date date1 = new Date();
+//          Date date2 = new Date("2018-05-10");
+//          
+//          System.out.println(date1.toString()+ " - "+ date2.toString() +"="+ date1.compareTo(date2));
+//          date2 = new Date("2018-05-11");
+//          System.out.println(date1.toString()+ " - "+ date2.toString() +"="+ date1.compareTo(date2));
+//          date2 = new Date("2018-05-12");
+//          System.out.println(date1.toString()+ " - "+ date2.toString() +"="+ date1.compareTo(date2));
+
 //          Animal[] animalsList = am.all();
 //          for(Animal a:animalsList){
 //              System.out.println(a.shortInfo());

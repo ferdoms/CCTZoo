@@ -5,7 +5,7 @@
  */
 package view;
 
-import animals.Animal;
+import animal.Animal;
 
 /**
  *

@@ -1,8 +1,9 @@
 
 package ultility;
 
-import animals.*;
-import java.util.Random;
+import species.*;
+import animal.Animal;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,7 +17,7 @@ import java.util.Random;
  */
 public class AnimalFactory {
 
-    public Animal create(String animal, Date dateOfBirth, Date dateOfArrival,String gender){
+    public Animal create(String animal, Date dateOfBirth, Date dateOfArrival, String gender){
         switch(animal){
             case "Bat":
                 return new Bat(dateOfBirth, dateOfArrival, gender);

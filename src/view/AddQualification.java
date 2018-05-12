@@ -50,30 +50,66 @@ public class AddQualification extends View{
         
         switch(getInputWithLabel("Option")){
             case "1":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 keeper.setQualification("Aquatic");
                 return new AddQualification(keeper);
             case "2":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 keeper.setQualification("Avian");
                 return new AddQualification(keeper);
             case "3":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 keeper.setQualification("Insect");
                 return new AddQualification(keeper);
             case "4":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 keeper.setQualification("Mammal");
                 return new AddQualification(keeper);
             case "5":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 keeper.setQualification("MammalAquatic");
                 return new AddQualification(keeper);
             case "6":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 keeper.setQualification("MammalAvian");
                 return new AddQualification(keeper);
             case "7":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 keeper.setQualification("Reptile");
                 return new AddQualification(keeper);
             case "8":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 keeper.setQualification("ReptileAquatic");
                 return new AddQualification(keeper);
             case "9":
+                if(!keeper.canQualificate()){
+                    err("This keeper has already 3 qualifications.");
+                    return new ShowKeeper(keeper);
+                }
                 return new KeeperMenu();
             case "0":
                 return null;

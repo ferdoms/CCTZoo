@@ -5,7 +5,7 @@
  */
 package view;
 
-import animals.Animal;
+import animal.Animal;
 
 /**
  * Purpose: is to print a detailed animal info

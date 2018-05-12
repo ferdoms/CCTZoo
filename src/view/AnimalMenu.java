@@ -5,8 +5,8 @@
  */
 package view;
 
-import animals.Animal;
-
+import animal.Animal;
+import ultility.Date;
 /**
  *
  * @author Fernando Marinho da Silva
@@ -23,6 +23,7 @@ public class AnimalMenu extends View{
         System.out.println("1-Search Menu");
         System.out.println("2-List Animals");
         System.out.println("3-Update Animal");
+        System.out.println("4-Add Animal");
         System.out.println();
         System.out.println("9-Return");
         System.out.println("0-Exit");
@@ -46,6 +47,24 @@ public class AnimalMenu extends View{
                     return this;
                 }
                 return new UpdateAnimal(result); 
+            case "4":
+                String specie = getInputWithLabel("Specie");
+                Date birthDate = new Date(getInputWithLabel("Birth date (yyyy-mm-dd)"));
+                Date arrivalDate = new Date(getInputWithLabel("Arrival date (yyyy-mm-dd)"));
+                String gender;
+                do{
+                    gender = getInputWithLabel("Gender");
+                    if(!(gender.equalsIgnoreCase("female") || gender.equalsIgnoreCase("male"))){
+                        gender="";
+                        err("Unable to identify the typed gender.");
+                        
+                    }
+                }while(gender.equals(""));
+                
+                Animal animal = animalFactory().create(specie, birthDate, arrivalDate, gender);
+                animal().save(animal);
+                return new UpdateAnimal(animal);
+                
             case "9":
                 return new MainMenu();
             case "0":
