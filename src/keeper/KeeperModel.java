@@ -87,14 +87,6 @@ public class KeeperModel {
         return keepers.toArray(new Keeper[keepers.size()]);
     }
     
-    // testing class
-    public void keeperlist(){
-//        for(Keeper keeper:keepers){
-//            System.out.println(keeper.getQualification()+ " - " + keeper.getName() 
-//                    + " The " + keeper.keeperNumber();
-//        }
-    }
-    
     public void autoAssignAnimals(AnimalModel am){
 
         for(Animal animal:am.all()){

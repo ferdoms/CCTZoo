@@ -92,12 +92,5 @@ public class AnimalModel {
     public Animal[] all(){
         return animals.toArray(new Animal[animals.size()]);
     }
-    // testing class
-    public void list(){
-        for(Animal animal:animals){
-            System.out.println(animal.getExhibitNumber()+ " - " + animal.getName() 
-                    + " The " + animal.getSpecie() + " - " + animal.getGender() 
-                    + " - " + animal.getType());
-        }
-    }
+
 }

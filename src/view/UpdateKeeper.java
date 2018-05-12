@@ -36,7 +36,7 @@ public class UpdateKeeper extends View {
         System.out.println();
         System.out.println("1-Add Qualifications");
         System.out.println("2-Assign Animal");
-        System.out.println("3-Unassing Animal");
+        System.out.println("3-Unassign Animal");
         System.out.println();
         System.out.println("0-Return");
         System.out.println();
