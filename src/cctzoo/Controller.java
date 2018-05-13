@@ -14,6 +14,7 @@ import view.*;
 /**
  * Purpose: it control the basics of the system, setup data, updates the view and
  * exits the system.
+ * @author thiago silva farias
  * @author fernandoms
  */
 public class Controller {

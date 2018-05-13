@@ -11,6 +11,7 @@ import java.util.ArrayList;
 /**
  * Purpose:  this class stores animals data and performs searches through it during 
  * the system life cycle.
+ * @author thiago silva farias
  * @author fernandoms
  */
 public class AnimalModel {

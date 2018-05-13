@@ -10,7 +10,7 @@ import animal.Animal;
 import ultility.Date;
 
 /**
- *
+ * @author thiago silva farias
  * @author fernandoms
  */
 public class UpdateAnimal extends View {
@@ -29,8 +29,8 @@ public class UpdateAnimal extends View {
         System.out.println();
         System.out.println("1-Arrival date (yyyy-mm-dd): " + animal.getDateOfArrival());
         System.out.println("2-Birth date (yyyy-mm-dd): " + animal.getDateOfBirth());
-        System.out.println("4-Medication: " + animal.getMedication());
-        System.out.println("3-Vaccine: " + animal.isVaccinated());
+        System.out.println("3-Medication: " + animal.getMedication());
+        System.out.println("4-Vaccine: " + animal.isVaccinated());
         System.out.println("5-Offspring: " + animal.getOffSpring().length);
         for(String aExhibitNumber:animal.getOffSpring()){
             if(aExhibitNumber!=null){

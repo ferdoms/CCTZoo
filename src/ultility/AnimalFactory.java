@@ -13,6 +13,7 @@ import animal.Animal;
 
 /**
  *
+ * @author thiago silva farias
  * @author fernandoms
  */
 public class AnimalFactory {
